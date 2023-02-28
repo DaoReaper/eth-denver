@@ -1,0 +1,180 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IInitData.sol\":\"IInitData\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"contracts/interfaces/IInitData.sol\":{\"keccak256\":\"0xf3ba2ebe252dd904ef4c86263eb89f3660d2e0145cf2c36d9b16db98e5d08c5d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://261c50da06c8cc7e802f774c0a47c88e20445b9b6ca8a8c8a205bd0d257dd088\",\"dweb:/ipfs/QmTo26dUZGAjAZd5i5QwcxPQsbbrF9e36btUbACJKAZoB5\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IInitData.sol": "IInitData"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IInitData.sol": {
+        "keccak256": "0xf3ba2ebe252dd904ef4c86263eb89f3660d2e0145cf2c36d9b16db98e5d08c5d",
+        "urls": [
+          "bzz-raw://261c50da06c8cc7e802f774c0a47c88e20445b9b6ca8a8c8a205bd0d257dd088",
+          "dweb:/ipfs/QmTo26dUZGAjAZd5i5QwcxPQsbbrF9e36btUbACJKAZoB5"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IInitData.sol",
+    "id": 448,
+    "exportedSymbols": {
+      "IInitData": [
+        447
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:202:3",
+    "nodes": [
+      {
+        "id": 441,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:3",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 447,
+        "nodeType": "ContractDefinition",
+        "src": "57:176:3",
+        "nodes": [
+          {
+            "id": 446,
+            "nodeType": "StructDefinition",
+            "src": "83:148:3",
+            "nodes": [],
+            "canonicalName": "IInitData.InitData",
+            "members": [
+              {
+                "constant": false,
+                "id": 443,
+                "mutability": "mutable",
+                "name": "baalDao",
+                "nameLocation": "117:7:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 446,
+                "src": "109:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 442,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "109:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 445,
+                "mutability": "mutable",
+                "name": "interval",
+                "nameLocation": "165:8:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 446,
+                "src": "157:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 444,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "157:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "InitData",
+            "nameLocation": "90:8:3",
+            "scope": 447,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IInitData",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          447
+        ],
+        "name": "IInitData",
+        "nameLocation": "67:9:3",
+        "scope": 448,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 3
+}
