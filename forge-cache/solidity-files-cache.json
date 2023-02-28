@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Reaper.sol": {
-      "lastModificationDate": 1677545095315,
-      "contentHash": "aa19ca9e974357ebe474e528559eeeb8",
+      "lastModificationDate": 1677609788095,
+      "contentHash": "83ae6dc8c0445766e3d5701e20e7acda",
       "sourceName": "contracts/Reaper.sol",
       "solcConfig": {
         "settings": {
@@ -47,6 +47,8 @@
       "imports": [
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
@@ -94,6 +96,8 @@
         "contracts/Reaper.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -183,46 +187,6 @@
       "artifacts": {
         "IInitData": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "IInitData.sol/IInitData.json"
-        }
-      }
-    },
-    "lib/forge-std/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1677537506169,
-      "contentHash": "9dafe5dfc99d6e8d79249a343b8b8ab5",
-      "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.5.0",
-      "artifacts": {
-        "DSTest": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "test.sol/DSTest.json"
         }
       }
     },
@@ -327,49 +291,6 @@
         }
       }
     },
-    "lib/forge-std/src/StdAssertions.sol": {
-      "lastModificationDate": 1677537506172,
-      "contentHash": "230f87f1ad2d1e42d1871fc991c61234",
-      "sourceName": "lib/forge-std/src/StdAssertions.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/StdMath.sol"
-      ],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "StdAssertions": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "StdAssertions.sol/StdAssertions.json"
-        }
-      }
-    },
     "lib/forge-std/src/StdChains.sol": {
       "lastModificationDate": 1677537506173,
       "contentHash": "f73fef006f384b898c755b0e404b84a2",
@@ -455,86 +376,6 @@
         },
         "StdCheatsSafe": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "StdCheats.sol/StdCheatsSafe.json"
-        }
-      }
-    },
-    "lib/forge-std/src/StdError.sol": {
-      "lastModificationDate": 1677537506174,
-      "contentHash": "64c896e1276a291776e5ea5aecb3870a",
-      "sourceName": "lib/forge-std/src/StdError.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "stdError": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "StdError.sol/stdError.json"
-        }
-      }
-    },
-    "lib/forge-std/src/StdInvariant.sol": {
-      "lastModificationDate": 1677537506175,
-      "contentHash": "12c06010ec43ce935ed209d5aca30828",
-      "sourceName": "lib/forge-std/src/StdInvariant.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "StdInvariant": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "StdInvariant.sol/StdInvariant.json"
         }
       }
     },
@@ -708,62 +549,6 @@
         }
       }
     },
-    "lib/forge-std/src/Test.sol": {
-      "lastModificationDate": 1677537506179,
-      "contentHash": "095f745449cb5b6ff27a2e53892b648f",
-      "sourceName": "lib/forge-std/src/Test.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol"
-      ],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "Test": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Test.sol/Test.json"
-        }
-      }
-    },
     "lib/forge-std/src/Vm.sol": {
       "lastModificationDate": 1677537506180,
       "contentHash": "7ca2e92dbe1abdc52e68bfd58bca1cc1",
@@ -924,6 +709,88 @@
       "artifacts": {
         "IMulticall3": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "IMulticall3.sol/IMulticall3.json"
+        }
+      }
+    },
+    "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol": {
+      "lastModificationDate": 1677608385286,
+      "contentHash": "70d93d6b3e8b23f419fe3e529a43c17e",
+      "sourceName": "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.7.0, <0.9.0",
+      "artifacts": {
+        "Enum": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Enum.sol/Enum.json"
+        }
+      }
+    },
+    "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol": {
+      "lastModificationDate": 1677609003282,
+      "contentHash": "bb02dceefbcfb8ce587bf99763cbbc9b",
+      "sourceName": "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol"
+      ],
+      "versionRequirement": ">=0.7.0, <0.9.0",
+      "artifacts": {
+        "IAvatar": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "IAvatar.sol/IAvatar.json"
         }
       }
     },
@@ -1138,6 +1005,8 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -1150,10 +1019,10 @@
         }
       }
     },
-    "scripts/foundry/ProposeShaman.s.sol": {
-      "lastModificationDate": 1677545436710,
-      "contentHash": "ca97c7d46f80fb9e707bf4a4a804b142",
-      "sourceName": "scripts/foundry/ProposeShaman.s.sol",
+    "scripts/foundry/ReaperInitiation.s.sol": {
+      "lastModificationDate": 1677609656705,
+      "contentHash": "9a87d5390a6e4fb330e94437e050c1c9",
+      "sourceName": "scripts/foundry/ReaperInitiation.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1199,6 +1068,8 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -1207,14 +1078,75 @@
       ],
       "versionRequirement": "^0.8.9",
       "artifacts": {
-        "ProposeShamanScript": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ProposeShaman.s.sol/ProposeShamanScript.json"
+        "ReaperInitiationScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ReaperInitiation.s.sol/ReaperInitiationScript.json"
+        }
+      }
+    },
+    "scripts/foundry/test/InitSuccess.s.sol": {
+      "lastModificationDate": 1677611102114,
+      "contentHash": "14d29982d311a7e4cfc88aa2af91759d",
+      "sourceName": "scripts/foundry/test/InitSuccess.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Reaper.sol",
+        "contracts/interfaces/IBaal.sol",
+        "contracts/interfaces/IInitData.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "InitSuccessScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "InitSuccess.s.sol/InitSuccessScript.json"
         }
       }
     },
     "scripts/foundry/utils/ScriptHelper.s.sol": {
-      "lastModificationDate": 1677545422610,
-      "contentHash": "6cc2df2592cd1f67fbd9140e06498a1d",
+      "lastModificationDate": 1677610959499,
+      "contentHash": "14613b0f0bd828f5ffa268c044ef0cb4",
       "sourceName": "scripts/foundry/utils/ScriptHelper.s.sol",
       "solcConfig": {
         "settings": {
@@ -1261,6 +1193,8 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -1270,63 +1204,6 @@
       "artifacts": {
         "ScriptHelper": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "ScriptHelper.s.sol/ScriptHelper.json"
-        }
-      }
-    },
-    "test/foundry/Tester.t.sol": {
-      "lastModificationDate": 1677538951110,
-      "contentHash": "7c9542f3a526842e2db61ec8bfd2a4e5",
-      "sourceName": "test/foundry/Tester.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol"
-      ],
-      "versionRequirement": "^0.8.13",
-      "artifacts": {
-        "Tester": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Tester.t.sol/Tester.json"
         }
       }
     }

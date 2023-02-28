@@ -5,12 +5,12 @@ import {ScriptHelper} from "scripts/foundry/utils/ScriptHelper.s.sol";
 import {Reaper} from "contracts/Reaper.sol";
 
 // BROADCAST
-// forge script scripts/foundry/ProposeShaman.s.sol:ProposeShamanScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
+// forge script scripts/foundry/ReaperInitiation.s.sol:ReaperInitiationScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
 
 // SIMULATE
-// forge script scripts/foundry/ProposeShaman.s.sol:ProposeShamanScript --rpc-url $RU --private-key $PK -vvvv
+// forge script scripts/foundry/ReaperInitiation.s.sol:ReaperInitiationScript --rpc-url $RU --private-key $PK -vvvv
 
-contract ProposeShamanScript is ScriptHelper {
+contract ReaperInitiationScript is ScriptHelper {
     function run() public {
         vm.startBroadcast();
 

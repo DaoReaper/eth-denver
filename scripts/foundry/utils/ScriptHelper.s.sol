@@ -2,16 +2,17 @@
 pragma solidity ^0.8.9;
 
 import "lib/forge-std/src/Script.sol";
+import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import {ReaperFactory} from "contracts/ReaperFactory.sol";
 import {Reaper} from "contracts/Reaper.sol";
 import {IBaal} from "contracts/interfaces/IBaal.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
 
 // BROADCAST
-// forge script scripts/foundry/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
+// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
 
 // SIMULATE
-// forge script scripts/foundry/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK -vvvv
+// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK -vvvv
 
 contract ScriptHelper is Script, IInitData {
     ReaperFactory public factory;
@@ -20,7 +21,7 @@ contract ScriptHelper is Script, IInitData {
 
     // Baal DAO and Avatar (treasury) address
     IBaal public baal = IBaal(0xe6A491f18f366AAcf6145830271009B5689373DB);
-    address public avatar = baal.avatar();
+    IAvatar public avatar = IAvatar(baal.avatar());
 
     // deploy ReaperFactory
     function setUpFactory() public {
