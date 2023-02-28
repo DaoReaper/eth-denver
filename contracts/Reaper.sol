@@ -3,13 +3,17 @@ pragma solidity ^0.8.9;
 
 import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Initializable} from "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import {IBaal} from "contracts/interfaces/IBaal.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
 
 contract Reaper is IInitData, Initializable {
-    // Baal DAO and Shares
+    // Baal DAO, Shares Token
     IBaal public baal;
     IERC20 public sharesToken;
+
+    // Baal Avatar (Gnosis Safe / treasury)
+    IAvatar public avatar;
 
     // analysis interval
     uint256 public interval;
@@ -32,22 +36,30 @@ contract Reaper is IInitData, Initializable {
         // set address of DAO shares
         sharesToken = IERC20(baal.sharesToken());
 
+        // set address of the DAO treasury
+        avatar = IAvatar(baal.avatar());
+
         // set interval to poke Reaper
         interval = initData.interval;
 
-        // todo: set Zodiac Module under authority of Baal Shaman
+        // encode Zodiac-Module proposal
+        bytes memory moduleData;
+        moduleData = _encodeModuleProposal(address(this));
 
-        // encode shaman proposal
+        // encode Baal-Shaman proposal
         bytes memory shamanData;
         shamanData = _encodeShamanProposal(address(this), 2);
 
-        // submit SHAMAN proposal
-        bytes[] memory data = new bytes[](1);
+        // build multiSend proposal
+        bytes[] memory data = new bytes[](2);
         data[0] = shamanData;
+        data[1] = moduleData;
 
-        address[] memory targets = new address[](1);
+        address[] memory targets = new address[](2);
         targets[0] = address(baal);
+        targets[1] = address(avatar);
 
+        // submit multiSend proposal
         _submitBaalProposal(_encodeMultiMetaTx(data, targets));
     }
 
@@ -97,6 +109,17 @@ contract Reaper is IInitData, Initializable {
     /*************************
      ENCODING
      *************************/
+
+    /**
+     * @dev Encoding function for Baal Shaman
+     */
+    function _encodeModuleProposal(address module)
+        internal
+        pure
+        returns (bytes memory)
+    {
+        return abi.encodeWithSignature("enableModule(address)", module);
+    }
 
     /**
      * @dev Encoding function for Baal Shaman
