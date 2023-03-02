@@ -16,7 +16,15 @@ contract ReaperInitiationScript is ScriptHelper {
 
         setUpFactory();
 
-        configureInitData(address(baal), 30 days);
+        configureInitData(
+            address(baal),
+            address(testLiquidationAsset),
+            testLiquidationTarget,
+            testInterval,
+            false
+        );
+
+        testToken.approve(address(factory), linkDeposit);
 
         reaper = Reaper(factory.deployReaper(initData));
 

@@ -19,11 +19,11 @@ contract InitSuccessScript is Script {
     IBaal public baal = IBaal(0xe6A491f18f366AAcf6145830271009B5689373DB);
     IAvatar public avatar = IAvatar(baal.avatar());
 
-    function isModule() internal returns (bool) {
+    function isModule() internal view returns (bool) {
         return avatar.isModuleEnabled(address(reaper));
     }
 
-    function isShaman() internal returns (bool) {
+    function isShaman() internal view returns (bool) {
         return baal.isManager(address(reaper));
     }
 

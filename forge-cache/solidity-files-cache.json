@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Reaper.sol": {
-      "lastModificationDate": 1677609788095,
-      "contentHash": "83ae6dc8c0445766e3d5701e20e7acda",
+      "lastModificationDate": 1677733768608,
+      "contentHash": "9213fdda075e938ecd74c46888638416",
       "sourceName": "contracts/Reaper.sol",
       "solcConfig": {
         "settings": {
@@ -61,8 +61,8 @@
       }
     },
     "contracts/ReaperFactory.sol": {
-      "lastModificationDate": 1677543297196,
-      "contentHash": "3c8f2bccf25a532755e4c219aac73806",
+      "lastModificationDate": 1677626505459,
+      "contentHash": "eea395830fcf077766508e59e7f11345",
       "sourceName": "contracts/ReaperFactory.sol",
       "solcConfig": {
         "settings": {
@@ -99,7 +99,10 @@
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -151,8 +154,8 @@
       }
     },
     "contracts/interfaces/IInitData.sol": {
-      "lastModificationDate": 1677542662152,
-      "contentHash": "8a5765061a97e6836e94bc0df59234d7",
+      "lastModificationDate": 1677729450156,
+      "contentHash": "50880c26092d9e27e7978b65d72bdee4",
       "sourceName": "contracts/interfaces/IInitData.sol",
       "solcConfig": {
         "settings": {
@@ -834,6 +837,50 @@
         }
       }
     },
+    "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1677532161737,
+      "contentHash": "834a0dde221759af42b030253315b086",
+      "sourceName": "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
     "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1677532161909,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
@@ -871,6 +918,88 @@
       "artifacts": {
         "IERC20": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
+    "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1677532161913,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20Metadata": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "IERC20Metadata.sol/IERC20Metadata.json"
+        }
+      }
+    },
+    "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1677532161620,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "node_modules/@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Context.sol/Context.json"
         }
       }
     },
@@ -1008,7 +1137,10 @@
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -1020,8 +1152,8 @@
       }
     },
     "scripts/foundry/ReaperInitiation.s.sol": {
-      "lastModificationDate": 1677609656705,
-      "contentHash": "9a87d5390a6e4fb330e94437e050c1c9",
+      "lastModificationDate": 1677729502676,
+      "contentHash": "d2a59369a4d7630450cabf577d45cac2",
       "sourceName": "scripts/foundry/ReaperInitiation.s.sol",
       "solcConfig": {
         "settings": {
@@ -1071,7 +1203,10 @@
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
         "scripts/foundry/utils/ScriptHelper.s.sol"
@@ -1083,9 +1218,67 @@
         }
       }
     },
+    "scripts/foundry/test/DeployToken.s.sol": {
+      "lastModificationDate": 1677630838148,
+      "contentHash": "ba7701d34dae1fc58f042ea36f69a079",
+      "sourceName": "scripts/foundry/test/DeployToken.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "scripts/foundry/test/StableCoin.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "DeployTokenScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "DeployToken.s.sol/DeployTokenScript.json"
+        }
+      }
+    },
     "scripts/foundry/test/InitSuccess.s.sol": {
-      "lastModificationDate": 1677611102114,
-      "contentHash": "14d29982d311a7e4cfc88aa2af91759d",
+      "lastModificationDate": 1677617415979,
+      "contentHash": "bea258099d3597c8261c23a3e8b65847",
       "sourceName": "scripts/foundry/test/InitSuccess.s.sol",
       "solcConfig": {
         "settings": {
@@ -1144,9 +1337,110 @@
         }
       }
     },
+    "scripts/foundry/test/StableCoin.sol": {
+      "lastModificationDate": 1677630685387,
+      "contentHash": "a7f86d397e4a7e51de7eeb03d5f2ce2d",
+      "sourceName": "scripts/foundry/test/StableCoin.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "StableCoin": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "StableCoin.sol/StableCoin.json"
+        }
+      }
+    },
+    "scripts/foundry/utils/FundAddress.s.sol": {
+      "lastModificationDate": 1677734050890,
+      "contentHash": "cce034ef281300f0fe5a0906a91f362b",
+      "sourceName": "scripts/foundry/utils/FundAddress.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "FundAddressScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FundAddress.s.sol/FundAddressScript.json"
+        },
+        "TestToken": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FundAddress.s.sol/TestToken.json"
+        }
+      }
+    },
     "scripts/foundry/utils/ScriptHelper.s.sol": {
-      "lastModificationDate": 1677610959499,
-      "contentHash": "14613b0f0bd828f5ffa268c044ef0cb4",
+      "lastModificationDate": 1677734031406,
+      "contentHash": "e9e19562460501b8c91bab5509995b2c",
       "sourceName": "scripts/foundry/utils/ScriptHelper.s.sol",
       "solcConfig": {
         "settings": {
@@ -1196,7 +1490,10 @@
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],

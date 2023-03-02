@@ -1,0 +1,66 @@
+{
+  "transactions": [
+    {
+      "hash": "0x5493f02bc50784b925c4ad352a9dc48b4c7c44f72623b8b7e77cf0f3ca059933",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://eth-goerli.g.alchemy.com/v2/49Z_NgeD3j-WxnHQzifUkHA_IZUCKyrZ",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xd5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e",
+        "to": "0xba7c8d4a583375a3104f251bf40abd5ff2953e30",
+        "gas": "0x113f8",
+        "value": "0x0",
+        "data": "0x40c10f19000000000000000000000000828445ea10be8fd2c29db28c53531751b7a127290000000000000000000000000000000000000000000000056bc75e2d63100000",
+        "nonce": "0x1c",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [
+    {
+      "transactionHash": "0x5493f02bc50784b925c4ad352a9dc48b4c7c44f72623b8b7e77cf0f3ca059933",
+      "transactionIndex": "0x17",
+      "blockHash": "0x77fc1088eb6c8721619c2deebaa5cfc35cb79db2a22047b78793b6909e732497",
+      "blockNumber": "0x82f296",
+      "from": "0xD5d1bb95259Fe2c5a84da04D1Aa682C71A1B8C0E",
+      "to": "0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30",
+      "cumulativeGasUsed": "0xa6ffd",
+      "gasUsed": "0xc7cd",
+      "contractAddress": null,
+      "logs": [
+        {
+          "address": "0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "0x000000000000000000000000828445ea10be8fd2c29db28c53531751b7a12729"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000056bc75e2d63100000",
+          "blockHash": "0x77fc1088eb6c8721619c2deebaa5cfc35cb79db2a22047b78793b6909e732497",
+          "blockNumber": "0x82f296",
+          "transactionHash": "0x5493f02bc50784b925c4ad352a9dc48b4c7c44f72623b8b7e77cf0f3ca059933",
+          "transactionIndex": "0x17",
+          "logIndex": "0x4",
+          "removed": false
+        }
+      ],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000100000000000000000000000000000000000000000000010000000000008000000000000000000000000000000000000000000000000020000000000000000008800000000000000000000000010000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000020000000000000000000000000000200000000000000000000000000000000000000",
+      "type": "0x2",
+      "effectiveGasPrice": "0x45efc3c27"
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "path": "/Users/hunterking/Desktop/ethDenHack/eth-denver/broadcast/FundAddress.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1677732052,
+  "chain": 5,
+  "multi": false,
+  "commit": "3e6c040"
+}

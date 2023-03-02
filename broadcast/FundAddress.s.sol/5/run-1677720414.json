@@ -1,0 +1,38 @@
+{
+  "transactions": [
+    {
+      "hash": "0xca193b6276ac02935fab56f91a7aaa7784082aba3f2114980e675a3db97f8e71",
+      "transactionType": "CALL",
+      "contractName": "FuturoToken",
+      "contractAddress": "0xA49dF10dD5B84257dE634F4350218f615471Fc69",
+      "function": "mint(address,uint256)",
+      "arguments": [
+        "0xe6A491f18f366AAcf6145830271009B5689373DB",
+        "100000000000000000000"
+      ],
+      "rpc": "https://eth-goerli.g.alchemy.com/v2/49Z_NgeD3j-WxnHQzifUkHA_IZUCKyrZ",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xd5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e",
+        "to": "0xa49df10dd5b84257de634f4350218f615471fc69",
+        "gas": "0x113f8",
+        "value": "0x0",
+        "data": "0x40c10f19000000000000000000000000e6a491f18f366aacf6145830271009b5689373db0000000000000000000000000000000000000000000000056bc75e2d63100000",
+        "nonce": "0xd",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0xca193b6276ac02935fab56f91a7aaa7784082aba3f2114980e675a3db97f8e71"
+  ],
+  "path": "/Users/hunterking/Desktop/ethDenHack/eth-denver/broadcast/FundAddress.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1677720414,
+  "chain": 5,
+  "multi": false,
+  "commit": "3e6c040"
+}

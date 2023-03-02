@@ -4,6 +4,7 @@ pragma solidity ^0.8.9;
 import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Initializable} from "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
+import "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
 import {IBaal} from "contracts/interfaces/IBaal.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
 
@@ -15,11 +16,23 @@ contract Reaper is IInitData, Initializable {
     // Baal Avatar (Gnosis Safe / treasury)
     IAvatar public avatar;
 
+    // stable coin
+    IERC20 public liquidationAsset;
+
+    // public good
+    address public liquidationTarget;
+
     // analysis interval
     uint256 public interval;
 
     // last analysis
-    uint256 internal lastAnalysis;
+    uint256 public lastAnalysis;
+
+    // reputation or hardcore mode
+    bool public reputationReaper;
+
+    // reputation score (if reputationReaper enabled)
+    uint256 public reputationScore;
 
     constructor() {
         _disableInitializers();
@@ -39,8 +52,17 @@ contract Reaper is IInitData, Initializable {
         // set address of the DAO treasury
         avatar = IAvatar(baal.avatar());
 
+        // set ERC20 stable coin exit asset
+        liquidationAsset = IERC20(initData.liquidationAsset);
+
+        // set address of public good for donation
+        liquidationTarget = initData.liquidationTarget;
+
         // set interval to poke Reaper
         interval = initData.interval;
+
+        // set lastAnalysis to deployment time to begin window of analysis
+        lastAnalysis = block.timestamp;
 
         // encode Zodiac-Module proposal
         bytes memory moduleData;
@@ -84,16 +106,78 @@ contract Reaper is IInitData, Initializable {
      */
     function pokeReaper() external onlyMember {
         uint256 timeStamp = block.timestamp;
-        require(timeStamp >= lastAnalysis + interval);
+        require(timeStamp >= (lastAnalysis + interval));
 
         // todo: call the ChainLink matrix check
+
+        // for testing purposes (_raidTreasury should only be called by chainLinkReturn)
+        _raidTreasury();
 
         lastAnalysis = timeStamp;
     }
 
+    function chainLinkReturn() external {
+        // todo: protect function
+        // todo: if/else to compare values, activate Reap if score does not pass
+        /**
+        if (reputationReaper) {
+            if (!pass) {
+                reputationScore - 1;
+                if (reputationScore < 0) _raidTreasury();
+            } else {
+                reputationScore + 0.5;
+            }
+        } else {
+            if (!pass) _raidTreasury();
+        }
+         */
+    }
+
     /*************************
-     AUTHENTICATION FUNCTIONS
+     INTERNAL FUNCTIONS
      *************************/
+
+    /**
+     * @dev Mint Reaper total supply of shares * 1 billion shares
+     * to establish dictatorial control over DAO and make RageQuit ineffective
+     */
+    function _raidTreasury() internal {
+        uint256 totalSupply = sharesToken.totalSupply();
+
+        // build multiSend proposal
+        address[] memory recipients = new address[](1);
+        recipients[0] = address(this);
+
+        uint256[] memory amounts = new uint256[](1);
+        amounts[0] = totalSupply * (1e18 * 1e9); // totalSupply * 1 billion tokens
+
+        baal.mintShares(recipients, amounts);
+
+        // todo: create _swapAssets logic
+        // _swapAssets();
+
+        uint256 liquidationTotal = liquidationAsset.balanceOf(address(avatar));
+
+        bytes memory tokenCall = abi.encodeWithSignature(
+            "transfer(address,uint256)",
+            liquidationTarget,
+            liquidationTotal
+        );
+
+        avatar.execTransactionFromModule(
+            address(liquidationAsset),
+            0,
+            tokenCall,
+            Enum.Operation.Call
+        );
+    }
+
+    /**
+     * @dev Swap all gnosis safe assets for the liquidation asset on CoW
+     */
+    function _swapAssets() internal {
+        // todo: CoW to covert assets
+    }
 
     /**
      * @dev Authenticates users through the DAO contract
@@ -174,7 +258,7 @@ contract Reaper is IInitData, Initializable {
         require(msg.value == proposalOffering, "Missing tribute");
 
         string
-            memory metaString = '{"proposalType": "ADD_SHAMAN", "title": "Reaper", "description": "Assign Reaper contract as a Manager-Shaman"}';
+            memory metaString = '{"proposalType": "ADD_SHAMAN", "title": "Reaper", "description": "Assign Reaper contract as a Manager-Shaman and Safe-Module"}';
 
         baal.submitProposal{value: proposalOffering}(
             multiSendMetaTx,
