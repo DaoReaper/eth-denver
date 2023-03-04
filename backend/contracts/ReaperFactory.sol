@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "node_modules/@openzeppelin/contracts/proxy/Clones.sol";
-import {ERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {Reaper} from "contracts/Reaper.sol";
-import {IInitData} from "contracts/interfaces/IInitData.sol";
-import {ReaperConsumer} from "contracts/ReaperConsumer.sol";
+import "../node_modules/@openzeppelin/contracts/proxy/Clones.sol";
+import {ERC20} from "../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {Reaper} from "./Reaper.sol";
+import {IInitData} from "./interfaces/IInitData.sol";
+import {ReaperConsumer} from "./ReaperConsumer.sol";
 
 contract ReaperFactory is IInitData {
     address public reaperSingleton;
