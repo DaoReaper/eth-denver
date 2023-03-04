@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {Counters} from "node_modules/@openzeppelin/contracts/utils/Counters.sol";
-import {Initializable} from "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
-import "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
-import {IBaal} from "contracts/interfaces/IBaal.sol";
-import {IInitData} from "contracts/interfaces/IInitData.sol";
-import {ReaperConsumer} from "contracts/ReaperConsumer.sol";
-import {Functions} from "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol";
+import {IERC20} from "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {Counters} from "../node_modules/@openzeppelin/contracts/utils/Counters.sol";
+import {Initializable} from "../node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import {IAvatar} from "../node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
+import "../node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
+import {IBaal} from "./interfaces/IBaal.sol";
+import {IInitData} from "./interfaces/IInitData.sol";
+import {ReaperConsumer} from "./ReaperConsumer.sol";
+import {Functions} from "../node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol";
 
 contract Reaper is IInitData, Initializable {
     using Counters for Counters.Counter;

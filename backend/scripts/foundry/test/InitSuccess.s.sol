@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "lib/forge-std/src/Script.sol";
-import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
-import {Reaper} from "contracts/Reaper.sol";
-import {IBaal} from "contracts/interfaces/IBaal.sol";
+import "../../../lib/forge-std/src/Script.sol";
+import {IAvatar} from "../../../node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
+import {Reaper} from "../../../contracts/Reaper.sol";
+import {IBaal} from "../../../contracts/interfaces/IBaal.sol";
 
 // BROADCAST
 // forge script scripts/foundry/test/InitSuccess.s.sol:InitSuccessScript --rpc-url $RU --private-key $PK --broadcast -vvvv

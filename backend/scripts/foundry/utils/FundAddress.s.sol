@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "lib/forge-std/src/Script.sol";
+import "../../../lib/forge-std/src/Script.sol";
 
 // BROADCAST
 // forge script scripts/foundry/utils/FundAddress.s.sol:FundAddressScript --rpc-url $RU --private-key $PK --broadcast -vvvv

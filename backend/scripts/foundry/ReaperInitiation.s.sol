@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import {ScriptHelper} from "scripts/foundry/utils/ScriptHelper.s.sol";
-import {Reaper} from "contracts/Reaper.sol";
+import {ScriptHelper} from "./utils/ScriptHelper.s.sol";
+import {Reaper} from "../../contracts/Reaper.sol";
 
 // BROADCAST
 // forge script scripts/foundry/ReaperInitiation.s.sol:ReaperInitiationScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv

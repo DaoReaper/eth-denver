@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "lib/forge-std/src/Script.sol";
-import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
-import {ERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {ReaperFactory} from "contracts/ReaperFactory.sol";
-import {Reaper} from "contracts/Reaper.sol";
-import {IBaal} from "contracts/interfaces/IBaal.sol";
-import {IInitData} from "contracts/interfaces/IInitData.sol";
+import "../../../lib/forge-std/src/Script.sol";
+import {IAvatar} from "../../../node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
+import {ERC20} from "../../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {ReaperFactory} from "../../../contracts/ReaperFactory.sol";
+import {Reaper} from "../../../contracts/Reaper.sol";
+import {IBaal} from "../../../contracts/interfaces/IBaal.sol";
+import {IInitData} from "../../../contracts/interfaces/IInitData.sol";
 
 // BROADCAST
 // forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelper --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
