@@ -2,24 +2,31 @@
 pragma solidity ^0.8.9;
 
 import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {Counters} from "node_modules/@openzeppelin/contracts/utils/Counters.sol";
 import {Initializable} from "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {IAvatar} from "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
 import {IBaal} from "contracts/interfaces/IBaal.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
+import {ReaperConsumer} from "contracts/ReaperConsumer.sol";
+import {Functions} from "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol";
 
 contract Reaper is IInitData, Initializable {
-    // Baal DAO, Shares Token
+    using Counters for Counters.Counter;
+    Counters.Counter private _erc20Ids;
+
+    // Baal: DAO, Shares Token, & Avatar (Gnosis Safe / treasury)
     IBaal public baal;
     IERC20 public sharesToken;
-
-    // Baal Avatar (Gnosis Safe / treasury)
     IAvatar public avatar;
 
-    // stable coin
+    // Chainlink Functions Consumer
+    ReaperConsumer public consumer;
+
+    // stable coin for liquidation
     IERC20 public liquidationAsset;
 
-    // public good
+    // public good for liquidation
     address public liquidationTarget;
 
     // analysis interval
@@ -28,11 +35,14 @@ contract Reaper is IInitData, Initializable {
     // last analysis
     uint256 public lastAnalysis;
 
-    // reputation or hardcore mode
-    bool public reputationReaper;
-
-    // reputation score (if reputationReaper enabled)
+    // reputation score
     uint256 public reputationScore;
+
+    // reputation score cutoff out of 100
+    uint256 public threshold;
+
+    // ERC20 token holdings
+    mapping(uint256 => address) safeERC20s;
 
     constructor() {
         _disableInitializers();
@@ -42,7 +52,10 @@ contract Reaper is IInitData, Initializable {
      * @dev Deploys a new clone proxy instance for cohort staking
      * @param initData configured initialization data
      */
-    function initialize(InitData calldata initData) external initializer {
+    function initialize(InitData calldata initData, address chainlinkConsumer)
+        external
+        initializer
+    {
         // set address of DAO
         baal = IBaal(initData.baalDao);
 
@@ -60,6 +73,9 @@ contract Reaper is IInitData, Initializable {
 
         // set interval to poke Reaper
         interval = initData.interval;
+
+        // set score cutoff
+        threshold = initData.threshold;
 
         // set lastAnalysis to deployment time to begin window of analysis
         lastAnalysis = block.timestamp;
@@ -104,33 +120,73 @@ contract Reaper is IInitData, Initializable {
     /**
      * @dev Allow any member of the DAO to call the Reaper to run an analysis
      */
-    function pokeReaper() external onlyMember {
+    function pokeReaper(
+        string calldata source,
+        bytes calldata secrets,
+        Functions.Location secretsLocation,
+        string[] calldata args,
+        uint64 subscriptionId,
+        uint32 gasLimit
+    ) external onlyMember {
         uint256 timeStamp = block.timestamp;
         require(timeStamp >= (lastAnalysis + interval));
 
-        // todo: call the ChainLink matrix check
-
-        // for testing purposes (_raidTreasury should only be called by chainLinkReturn)
-        _raidTreasury();
+        // call the ChainLink matrix check
+        consumer.executeRequest(
+            source,
+            secrets,
+            secretsLocation,
+            args,
+            subscriptionId,
+            gasLimit
+        );
 
         lastAnalysis = timeStamp;
     }
 
-    function chainLinkReturn() external {
-        // todo: protect function
-        // todo: if/else to compare values, activate Reap if score does not pass
-        /**
-        if (reputationReaper) {
-            if (!pass) {
-                reputationScore - 1;
-                if (reputationScore < 0) _raidTreasury();
-            } else {
-                reputationScore + 0.5;
+    /**
+     * @dev Same as pokeReaper, but for testing:
+     * Chainlink is not available on Goerli
+     * whereas DaoHaus is only available on Goerli
+     */
+    function pokeReaperTest(bool pass) external onlyMember {
+        uint256 timeStamp = block.timestamp;
+        require(timeStamp >= (lastAnalysis + interval));
+
+        if (!pass) {
+            reputationScore -= 10;
+            if (reputationScore < 0) {
+                // for testing purposes (_raidTreasury should only be called by chainLinkReturn)
+                _raidTreasury();
             }
         } else {
-            if (!pass) _raidTreasury();
+            reputationScore += 5;
         }
-         */
+
+        lastAnalysis = timeStamp;
+    }
+
+    /**
+     * @dev Add gnosis safe asset holdings
+     */
+    function addSafeHoldings(address[] calldata tokens) external {
+        uint256 l = tokens.length;
+        for (uint256 i = 0; i < l; i++) {
+            if (IERC20(tokens[i]).balanceOf(address(avatar)) > 0) {
+                _erc20Ids.increment();
+                uint256 id = _erc20Ids.current();
+                safeERC20s[id] = tokens[i];
+            }
+        }
+    }
+
+    function chainlinkRes(uint256 score) external {
+        if (score < threshold) {
+            reputationScore - 10;
+            if (reputationScore < 0) _raidTreasury();
+        } else {
+            reputationScore + 5;
+        }
     }
 
     /*************************
@@ -149,34 +205,33 @@ contract Reaper is IInitData, Initializable {
         recipients[0] = address(this);
 
         uint256[] memory amounts = new uint256[](1);
-        amounts[0] = totalSupply * (1e18 * 1e9); // totalSupply * 1 billion tokens
+        amounts[0] = totalSupply * 1e9; // totalSupply * 1 billion tokens
 
         baal.mintShares(recipients, amounts);
 
-        // todo: create _swapAssets logic
-        // _swapAssets();
+        // loop thru all erc20 assets to liquidate
+        uint256 l = _erc20Ids.current();
+        for (uint256 i = 0; i < l; i++) {
+            erc20token = safeERC20s[i];
+            uint256 bal = erc20token.balanceOf(address(avatar));
 
-        uint256 liquidationTotal = liquidationAsset.balanceOf(address(avatar));
+            bytes memory tokenCall = abi.encodeWithSignature(
+                "transfer(address,uint256)",
+                liquidationTarget,
+                liquidationTotal
+            );
 
-        bytes memory tokenCall = abi.encodeWithSignature(
-            "transfer(address,uint256)",
-            liquidationTarget,
-            liquidationTotal
-        );
+            avatar.execTransactionFromModule(
+                address(liquidationAsset),
+                0,
+                tokenCall,
+                Enum.Operation.Call
+            );
+        }
 
-        avatar.execTransactionFromModule(
-            address(liquidationAsset),
-            0,
-            tokenCall,
-            Enum.Operation.Call
-        );
-    }
-
-    /**
-     * @dev Swap all gnosis safe assets for the liquidation asset on CoW
-     */
-    function _swapAssets() internal {
-        // todo: CoW to covert assets
+        // liquidate ether
+        (bool success, ) = avatar.call{value: avatar.balance}("");
+        require(success, "Ether tx failed");
     }
 
     /**

@@ -11,7 +11,7 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IInitData.sol\":\"IInitData\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"contracts/interfaces/IInitData.sol\":{\"keccak256\":\"0x0f5389199d7cb98e1fd8fc29f807d4b4f0931c81875147ea4bcec4c4b5b3b788\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6857aaea68b6a42804ab7567649e4feb5ff8067ff041df36f4226f63b2261b85\",\"dweb:/ipfs/QmVNcaNcZweEzwjF4WioQNS2cBd7jJhPTYbN296uCksEn5\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IInitData.sol\":\"IInitData\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=node_modules/@chainlink/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"contracts/interfaces/IInitData.sol\":{\"keccak256\":\"0xc07052a5690fcd5826826d9ca7413d26c1f760a51050ab150b42391c69bf8221\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://afe9142ecdc7a5dcaf84055c9f5792e21125b33d554c81ea4f8d8cf6550c4fe2\",\"dweb:/ipfs/QmQVmoHahY7iZKHXqKJjGNa9dR2nL7vHtgBVZ3puffrMR9\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.17+commit.8df45f5f"
@@ -32,6 +32,8 @@
     },
     "settings": {
       "remappings": [
+        ":@chainlink/=node_modules/@chainlink/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
         ":@gnosis.pm/=node_modules/@gnosis.pm/",
         ":@openzeppelin/=node_modules/@openzeppelin/",
         ":ds-test/=lib/forge-std/lib/ds-test/src/",
@@ -53,10 +55,10 @@
     },
     "sources": {
       "contracts/interfaces/IInitData.sol": {
-        "keccak256": "0x0f5389199d7cb98e1fd8fc29f807d4b4f0931c81875147ea4bcec4c4b5b3b788",
+        "keccak256": "0xc07052a5690fcd5826826d9ca7413d26c1f760a51050ab150b42391c69bf8221",
         "urls": [
-          "bzz-raw://6857aaea68b6a42804ab7567649e4feb5ff8067ff041df36f4226f63b2261b85",
-          "dweb:/ipfs/QmVNcaNcZweEzwjF4WioQNS2cBd7jJhPTYbN296uCksEn5"
+          "bzz-raw://afe9142ecdc7a5dcaf84055c9f5792e21125b33d554c81ea4f8d8cf6550c4fe2",
+          "dweb:/ipfs/QmQVmoHahY7iZKHXqKJjGNa9dR2nL7vHtgBVZ3puffrMR9"
         ],
         "license": "MIT"
       }
@@ -65,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/IInitData.sol",
-    "id": 678,
+    "id": 1074,
     "exportedSymbols": {
       "IInitData": [
-        677
+        1073
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:514:3",
+    "src": "32:510:4",
     "nodes": [
       {
-        "id": 665,
+        "id": 1061,
         "nodeType": "PragmaDirective",
-        "src": "32:23:3",
+        "src": "32:23:4",
         "nodes": [],
         "literals": [
           "solidity",
@@ -87,26 +89,26 @@
         ]
       },
       {
-        "id": 677,
+        "id": 1073,
         "nodeType": "ContractDefinition",
-        "src": "57:488:3",
+        "src": "57:484:4",
         "nodes": [
           {
-            "id": 676,
+            "id": 1072,
             "nodeType": "StructDefinition",
-            "src": "369:174:3",
+            "src": "369:170:4",
             "nodes": [],
             "canonicalName": "IInitData.InitData",
             "members": [
               {
                 "constant": false,
-                "id": 667,
+                "id": 1063,
                 "mutability": "mutable",
                 "name": "baalDao",
-                "nameLocation": "403:7:3",
+                "nameLocation": "403:7:4",
                 "nodeType": "VariableDeclaration",
-                "scope": 676,
-                "src": "395:15:3",
+                "scope": 1072,
+                "src": "395:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -114,10 +116,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 666,
+                  "id": 1062,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "395:7:3",
+                  "src": "395:7:4",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -128,13 +130,13 @@
               },
               {
                 "constant": false,
-                "id": 669,
+                "id": 1065,
                 "mutability": "mutable",
                 "name": "liquidationAsset",
-                "nameLocation": "428:16:3",
+                "nameLocation": "428:16:4",
                 "nodeType": "VariableDeclaration",
-                "scope": 676,
-                "src": "420:24:3",
+                "scope": 1072,
+                "src": "420:24:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -142,10 +144,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 668,
+                  "id": 1064,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "420:7:3",
+                  "src": "420:7:4",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -156,13 +158,13 @@
               },
               {
                 "constant": false,
-                "id": 671,
+                "id": 1067,
                 "mutability": "mutable",
                 "name": "liquidationTarget",
-                "nameLocation": "462:17:3",
+                "nameLocation": "462:17:4",
                 "nodeType": "VariableDeclaration",
-                "scope": 676,
-                "src": "454:25:3",
+                "scope": 1072,
+                "src": "454:25:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -170,10 +172,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 670,
+                  "id": 1066,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "454:7:3",
+                  "src": "454:7:4",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -184,13 +186,13 @@
               },
               {
                 "constant": false,
-                "id": 673,
+                "id": 1069,
                 "mutability": "mutable",
                 "name": "interval",
-                "nameLocation": "497:8:3",
+                "nameLocation": "497:8:4",
                 "nodeType": "VariableDeclaration",
-                "scope": 676,
-                "src": "489:16:3",
+                "scope": 1072,
+                "src": "489:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -198,10 +200,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 672,
+                  "id": 1068,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "489:7:3",
+                  "src": "489:7:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -211,35 +213,35 @@
               },
               {
                 "constant": false,
-                "id": 675,
+                "id": 1071,
                 "mutability": "mutable",
-                "name": "reputationReaper",
-                "nameLocation": "520:16:3",
+                "name": "threshold",
+                "nameLocation": "523:9:4",
                 "nodeType": "VariableDeclaration",
-                "scope": 676,
-                "src": "515:21:3",
+                "scope": 1072,
+                "src": "515:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bool",
-                  "typeString": "bool"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 674,
-                  "name": "bool",
+                  "id": 1070,
+                  "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "515:4:3",
+                  "src": "515:7:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   }
                 },
                 "visibility": "internal"
               }
             ],
             "name": "InitData",
-            "nameLocation": "376:8:3",
-            "scope": 677,
+            "nameLocation": "376:8:4",
+            "scope": 1073,
             "visibility": "public"
           }
         ],
@@ -250,15 +252,15 @@
         "contractKind": "interface",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          677
+          1073
         ],
         "name": "IInitData",
-        "nameLocation": "67:9:3",
-        "scope": 678,
+        "nameLocation": "67:9:4",
+        "scope": 1074,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 3
+  "id": 4
 }

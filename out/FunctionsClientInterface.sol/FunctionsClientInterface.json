@@ -1,0 +1,396 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getDONPublicKey",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "requestId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "response",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "err",
+          "type": "bytes"
+        }
+      ],
+      "name": "handleOracleFulfillment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getDONPublicKey()": "d328a91e",
+    "handleOracleFulfillment(bytes32,bytes,bytes)": "0ca76175"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getDONPublicKey\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"response\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"err\",\"type\":\"bytes\"}],\"name\":\"handleOracleFulfillment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getDONPublicKey()\":{\"details\":\"All Oracles nodes have the corresponding private key needed to decrypt the secrets encrypted with the public key\",\"returns\":{\"_0\":\"publicKey DON's public key\"}},\"handleOracleFulfillment(bytes32,bytes,bytes)\":{\"params\":{\"err\":\"Aggregated error either from the user code or from the execution pipeline. Either response or error parameter will be set, but never both.\",\"requestId\":\"The requestId returned by FunctionsClient.sendRequest().\",\"response\":\"Aggregated response from the user code.\"}}},\"title\":\"Chainlink Functions client interface.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getDONPublicKey()\":{\"notice\":\"Returns the DON's secp256k1 public key used to encrypt secrets\"},\"handleOracleFulfillment(bytes32,bytes,bytes)\":{\"notice\":\"Chainlink Functions response handler called by the designated transmitter node in an OCR round.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol\":\"FunctionsClientInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=node_modules/@chainlink/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol\":{\"keccak256\":\"0xd5c899b894dc62548149681ee46f2027a6dac18eea67663069e496ea48e4f1fb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f50b13face4c1e666c94536714d576fa9703d6d2f4436de087bf819c56cf7a52\",\"dweb:/ipfs/QmW5MCqr3zd3yTZzyc2WWUiAqzuxHW1eUruchHpY58N221\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getDONPublicKey",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "requestId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "response",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "err",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "handleOracleFulfillment"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getDONPublicKey()": {
+            "details": "All Oracles nodes have the corresponding private key needed to decrypt the secrets encrypted with the public key",
+            "returns": {
+              "_0": "publicKey DON's public key"
+            }
+          },
+          "handleOracleFulfillment(bytes32,bytes,bytes)": {
+            "params": {
+              "err": "Aggregated error either from the user code or from the execution pipeline. Either response or error parameter will be set, but never both.",
+              "requestId": "The requestId returned by FunctionsClient.sendRequest().",
+              "response": "Aggregated response from the user code."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getDONPublicKey()": {
+            "notice": "Returns the DON's secp256k1 public key used to encrypt secrets"
+          },
+          "handleOracleFulfillment(bytes32,bytes,bytes)": {
+            "notice": "Chainlink Functions response handler called by the designated transmitter node in an OCR round."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@gnosis.pm/=node_modules/@gnosis.pm/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol": "FunctionsClientInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol": {
+        "keccak256": "0xd5c899b894dc62548149681ee46f2027a6dac18eea67663069e496ea48e4f1fb",
+        "urls": [
+          "bzz-raw://f50b13face4c1e666c94536714d576fa9703d6d2f4436de087bf819c56cf7a52",
+          "dweb:/ipfs/QmW5MCqr3zd3yTZzyc2WWUiAqzuxHW1eUruchHpY58N221"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+    "id": 25387,
+    "exportedSymbols": {
+      "FunctionsClientInterface": [
+        25386
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:986:23",
+    "nodes": [
+      {
+        "id": 25368,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ]
+      },
+      {
+        "id": 25386,
+        "nodeType": "ContractDefinition",
+        "src": "113:904:23",
+        "nodes": [
+          {
+            "id": 25375,
+            "nodeType": "FunctionDefinition",
+            "src": "408:64:23",
+            "nodes": [],
+            "documentation": {
+              "id": 25370,
+              "nodeType": "StructuredDocumentation",
+              "src": "152:253:23",
+              "text": " @notice Returns the DON's secp256k1 public key used to encrypt secrets\n @dev All Oracles nodes have the corresponding private key\n needed to decrypt the secrets encrypted with the public key\n @return publicKey DON's public key"
+            },
+            "functionSelector": "d328a91e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDONPublicKey",
+            "nameLocation": "417:15:23",
+            "parameters": {
+              "id": 25371,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:2:23"
+            },
+            "returnParameters": {
+              "id": 25374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25373,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25375,
+                  "src": "458:12:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 25372,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:14:23"
+            },
+            "scope": 25386,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 25385,
+            "nodeType": "FunctionDefinition",
+            "src": "897:118:23",
+            "nodes": [],
+            "documentation": {
+              "id": 25376,
+              "nodeType": "StructuredDocumentation",
+              "src": "476:418:23",
+              "text": " @notice Chainlink Functions response handler called by the designated transmitter node in an OCR round.\n @param requestId The requestId returned by FunctionsClient.sendRequest().\n @param response Aggregated response from the user code.\n @param err Aggregated error either from the user code or from the execution pipeline.\n Either response or error parameter will be set, but never both."
+            },
+            "functionSelector": "0ca76175",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "handleOracleFulfillment",
+            "nameLocation": "906:23:23",
+            "parameters": {
+              "id": 25383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25378,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "943:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25385,
+                  "src": "935:17:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25377,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25380,
+                  "mutability": "mutable",
+                  "name": "response",
+                  "nameLocation": "971:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25385,
+                  "src": "958:21:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 25379,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "958:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25382,
+                  "mutability": "mutable",
+                  "name": "err",
+                  "nameLocation": "998:3:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25385,
+                  "src": "985:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 25381,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "985:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "929:76:23"
+            },
+            "returnParameters": {
+              "id": 25384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1014:0:23"
+            },
+            "scope": 25386,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "FunctionsClientInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 25369,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:55:23",
+          "text": " @title Chainlink Functions client interface."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          25386
+        ],
+        "name": "FunctionsClientInterface",
+        "nameLocation": "123:24:23",
+        "scope": 25387,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 23
+}

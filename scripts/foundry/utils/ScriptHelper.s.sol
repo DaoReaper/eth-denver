@@ -10,10 +10,10 @@ import {IBaal} from "contracts/interfaces/IBaal.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
 
 // BROADCAST
-// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
+// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelper --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
 
 // SIMULATE
-// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelperScript --rpc-url $RU --private-key $PK -vvvv
+// forge script scripts/foundry/utils/ScriptHelper.s.sol:ScriptHelper --rpc-url $RU --private-key $PK -vvvv
 
 contract ScriptHelper is Script, IInitData {
     ReaperFactory public factory;
@@ -21,7 +21,7 @@ contract ScriptHelper is Script, IInitData {
     InitData initData;
 
     // Baal DAO and Avatar (treasury) address
-    IBaal public baal = IBaal(0xB0E6081785E339e0F7b8627d1820f7CCC316A03a);
+    IBaal public baal = IBaal(0xfc4B92bd1F6172a4Ba4c7341A3A35c692495E364);
     IAvatar public avatar = IAvatar(baal.avatar());
 
     // LINK deposit
@@ -31,12 +31,14 @@ contract ScriptHelper is Script, IInitData {
 
     // Liquidation asset and target
     ERC20 public testLiquidationAsset =
-        ERC20(0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30);
+        ERC20(0x91056D4A53E1faa1A84306D4deAEc71085394bC8);
     address public testLiquidationTarget =
         0xa25256073cB38b8CAF83b208949E7f746f3BEBDc;
 
     // Reaper analysis interval
     uint256 testInterval = 1 minutes;
+
+    uint256 threshold = 70;
 
     // deploy ReaperFactory
     function setUpFactory() public {
@@ -49,12 +51,17 @@ contract ScriptHelper is Script, IInitData {
         address asset,
         address target,
         uint256 interval,
-        bool repuatationMode
+        uint256 threshold
     ) public {
         initData.baalDao = dao;
         initData.liquidationAsset = asset;
         initData.liquidationTarget = target;
         initData.interval = interval;
-        initData.reputationReaper = repuatationMode;
+        initData.threshold = threshold;
+    }
+
+    function fundSafe() public {
+        (bool success, ) = address(avatar).call{value: 0.05 ether}("");
+        require(success, "Ether not received!");
     }
 }

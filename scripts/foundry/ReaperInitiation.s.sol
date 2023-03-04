@@ -21,12 +21,14 @@ contract ReaperInitiationScript is ScriptHelper {
             address(testLiquidationAsset),
             testLiquidationTarget,
             testInterval,
-            false
+            threshold
         );
 
         testToken.approve(address(factory), linkDeposit);
 
         reaper = Reaper(factory.deployReaper(initData));
+
+        fundSafe();
 
         vm.stopBroadcast();
     }
