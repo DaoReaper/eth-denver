@@ -5,6 +5,8 @@ import {ScriptHelper} from "./utils/ScriptHelper.s.sol";
 import {Reaper} from "../../contracts/Reaper.sol";
 import {ReaperConsumer} from "../../contracts/ReaperConsumer.sol";
 
+// Chainlink only runs on Mumbai
+
 // BROADCAST
 // forge script scripts/foundry/ConsumerInitiation.s.sol:ConsumerInitiation --rpc-url $RUM --private-key $PKM --broadcast --verify --etherscan-api-key $EK -vvvv
 // forge script scripts/foundry/ConsumerInitiation.s.sol:ConsumerInitiation --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
@@ -18,24 +20,8 @@ contract ConsumerInitiation is ScriptHelper {
 
     function run() public {
         vm.startBroadcast();
-        // new Reaper();
+
         new ReaperConsumer(reaperConsumer);
-
-        // setUpFactory();
-
-        // configureInitData(
-        //     address(baal),
-        //     address(testLiquidationAsset),
-        //     testLiquidationTarget,
-        //     testInterval,
-        //     threshold
-        // );
-
-        // testToken.approve(address(factory), linkDeposit);
-
-        // reaper = Reaper(factory.deployReaper(initData));
-
-        // fundSafe();
 
         vm.stopBroadcast();
     }

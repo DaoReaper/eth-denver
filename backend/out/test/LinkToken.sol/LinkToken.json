@@ -1,0 +1,45 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/chainlink/test/LinkToken.sol",
+    "id": 3,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "32:80:0",
+    "nodes": [
+      {
+        "id": 1,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ]
+      },
+      {
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "src": "58:53:0",
+        "nodes": [],
+        "absolutePath": "node_modules/@chainlink/contracts/src/v0.4/LinkToken.sol",
+        "file": "@chainlink/contracts/src/v0.4/LinkToken.sol",
+        "scope": 3,
+        "sourceUnit": 228,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ]
+  },
+  "id": 0
+}

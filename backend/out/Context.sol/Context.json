@@ -67,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/utils/Context.sol",
-    "id": 27801,
+    "id": 27820,
     "exportedSymbols": {
       "Context": [
-        27800
+        27819
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "86:758:36",
+    "src": "86:758:35",
     "nodes": [
       {
-        "id": 27780,
+        "id": 27799,
         "nodeType": "PragmaDirective",
-        "src": "86:23:36",
+        "src": "86:23:35",
         "nodes": [],
         "literals": [
           "solidity",
@@ -89,53 +89,53 @@
         ]
       },
       {
-        "id": 27800,
+        "id": 27819,
         "nodeType": "ContractDefinition",
-        "src": "608:235:36",
+        "src": "608:235:35",
         "nodes": [
           {
-            "id": 27790,
+            "id": 27809,
             "nodeType": "FunctionDefinition",
-            "src": "640:96:36",
+            "src": "640:96:35",
             "nodes": [],
             "body": {
-              "id": 27789,
+              "id": 27808,
               "nodeType": "Block",
-              "src": "702:34:36",
+              "src": "702:34:35",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 27786,
+                      "id": 27805,
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": -15,
-                      "src": "719:3:36",
+                      "src": "719:3:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
                         "typeString": "msg"
                       }
                     },
-                    "id": 27787,
+                    "id": 27806,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "723:6:36",
+                    "memberLocation": "723:6:35",
                     "memberName": "sender",
                     "nodeType": "MemberAccess",
-                    "src": "719:10:36",
+                    "src": "719:10:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 27785,
-                  "id": 27788,
+                  "functionReturnParameters": 27804,
+                  "id": 27807,
                   "nodeType": "Return",
-                  "src": "712:17:36"
+                  "src": "712:17:35"
                 }
               ]
             },
@@ -143,26 +143,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "_msgSender",
-            "nameLocation": "649:10:36",
+            "nameLocation": "649:10:35",
             "parameters": {
-              "id": 27782,
+              "id": 27801,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "659:2:36"
+              "src": "659:2:35"
             },
             "returnParameters": {
-              "id": 27785,
+              "id": 27804,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 27784,
+                  "id": 27803,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 27790,
-                  "src": "693:7:36",
+                  "scope": 27809,
+                  "src": "693:7:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -170,10 +170,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 27783,
+                    "id": 27802,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "693:7:36",
+                    "src": "693:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -183,56 +183,56 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "692:9:36"
+              "src": "692:9:35"
             },
-            "scope": 27800,
+            "scope": 27819,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 27799,
+            "id": 27818,
             "nodeType": "FunctionDefinition",
-            "src": "742:99:36",
+            "src": "742:99:35",
             "nodes": [],
             "body": {
-              "id": 27798,
+              "id": 27817,
               "nodeType": "Block",
-              "src": "809:32:36",
+              "src": "809:32:35",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 27795,
+                      "id": 27814,
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": -15,
-                      "src": "826:3:36",
+                      "src": "826:3:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
                         "typeString": "msg"
                       }
                     },
-                    "id": 27796,
+                    "id": 27815,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "830:4:36",
+                    "memberLocation": "830:4:35",
                     "memberName": "data",
                     "nodeType": "MemberAccess",
-                    "src": "826:8:36",
+                    "src": "826:8:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_calldata_ptr",
                       "typeString": "bytes calldata"
                     }
                   },
-                  "functionReturnParameters": 27794,
-                  "id": 27797,
+                  "functionReturnParameters": 27813,
+                  "id": 27816,
                   "nodeType": "Return",
-                  "src": "819:15:36"
+                  "src": "819:15:35"
                 }
               ]
             },
@@ -240,26 +240,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "_msgData",
-            "nameLocation": "751:8:36",
+            "nameLocation": "751:8:35",
             "parameters": {
-              "id": 27791,
+              "id": 27810,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "759:2:36"
+              "src": "759:2:35"
             },
             "returnParameters": {
-              "id": 27794,
+              "id": 27813,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 27793,
+                  "id": 27812,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 27799,
-                  "src": "793:14:36",
+                  "scope": 27818,
+                  "src": "793:14:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -267,10 +267,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 27792,
+                    "id": 27811,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "793:5:36",
+                    "src": "793:5:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -279,9 +279,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "792:16:36"
+              "src": "792:16:35"
             },
-            "scope": 27800,
+            "scope": 27819,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
@@ -293,22 +293,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 27781,
+          "id": 27800,
           "nodeType": "StructuredDocumentation",
-          "src": "111:496:36",
+          "src": "111:496:35",
           "text": " @dev Provides information about the current execution context, including the\n sender of the transaction and its data. While these are generally available\n via msg.sender and msg.data, they should not be accessed in such a direct\n manner, since when dealing with meta-transactions the account sending and\n paying for execution may not be the actual sender (as far as an application\n is concerned).\n This contract is only required for intermediate, library-like contracts."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          27800
+          27819
         ],
         "name": "Context",
-        "nameLocation": "626:7:36",
-        "scope": 27801,
+        "nameLocation": "626:7:35",
+        "scope": 27820,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 36
+  "id": 35
 }

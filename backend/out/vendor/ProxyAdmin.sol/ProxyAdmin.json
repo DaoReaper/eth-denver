@@ -1,0 +1,81 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/chainlink/dev/functions/vendor/ProxyAdmin.sol",
+    "id": 5500,
+    "exportedSymbols": {
+      "Address": [
+        38600
+      ],
+      "Context": [
+        38622
+      ],
+      "ERC1967Proxy": [
+        36916
+      ],
+      "ERC1967Upgrade": [
+        37234
+      ],
+      "IBeacon": [
+        37296
+      ],
+      "IERC1822Proxiable": [
+        36799
+      ],
+      "Ownable": [
+        36789
+      ],
+      "Proxy": [
+        37286
+      ],
+      "ProxyAdmin": [
+        37432
+      ],
+      "StorageSlot": [
+        38756
+      ],
+      "TransparentUpgradeableProxy": [
+        37580
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "101:92:11",
+    "nodes": [
+      {
+        "id": 5498,
+        "nodeType": "PragmaDirective",
+        "src": "101:23:11",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 5499,
+        "nodeType": "ImportDirective",
+        "src": "126:66:11",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol",
+        "file": "@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5500,
+        "sourceUnit": 37433,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 11
+}

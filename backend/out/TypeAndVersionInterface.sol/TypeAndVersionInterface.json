@@ -1,0 +1,201 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "typeAndVersion",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "typeAndVersion()": "181f5a77"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"typeAndVersion\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol\":\"TypeAndVersionInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=node_modules/@chainlink/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol\":{\"keccak256\":\"0x805cc9a91d54db1bea60cb19f38364f1eac2735bddb3476294fb803c2f6b7097\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://05762f3335bb50fde2ece5ffbb735f22db35dc9489ea4716a4e731aa0aeee1e1\",\"dweb:/ipfs/QmNu4sZk9T8PZYMn2BvxECF911hAviCjE2T846Zir8H7RB\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "typeAndVersion",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@gnosis.pm/=node_modules/@gnosis.pm/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol": "TypeAndVersionInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol": {
+        "keccak256": "0x805cc9a91d54db1bea60cb19f38364f1eac2735bddb3476294fb803c2f6b7097",
+        "urls": [
+          "bzz-raw://05762f3335bb50fde2ece5ffbb735f22db35dc9489ea4716a4e731aa0aeee1e1",
+          "dweb:/ipfs/QmNu4sZk9T8PZYMn2BvxECF911hAviCjE2T846Zir8H7RB"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol",
+    "id": 34992,
+    "exportedSymbols": {
+      "TypeAndVersionInterface": [
+        34991
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:146:52",
+    "nodes": [
+      {
+        "id": 34985,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:52",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 34991,
+        "nodeType": "ContractDefinition",
+        "src": "57:120:52",
+        "nodes": [
+          {
+            "id": 34990,
+            "nodeType": "FunctionDefinition",
+            "src": "103:72:52",
+            "nodes": [],
+            "functionSelector": "181f5a77",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "typeAndVersion",
+            "nameLocation": "112:14:52",
+            "parameters": {
+              "id": 34986,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "126:2:52"
+            },
+            "returnParameters": {
+              "id": 34989,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34988,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34990,
+                  "src": "160:13:52",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 34987,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "160:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "159:15:52"
+            },
+            "scope": 34991,
+            "stateMutability": "pure",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "TypeAndVersionInterface",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          34991
+        ],
+        "name": "TypeAndVersionInterface",
+        "nameLocation": "75:23:52",
+        "scope": 34992,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 52
+}

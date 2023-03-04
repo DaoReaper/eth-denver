@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.7;
 
-import {FunctionsClient} from "../node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol";
-import {Functions} from "../node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol";
-import {ConfirmedOwner} from "../node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
+import {FunctionsClient} from "./chainlink/dev/functions/FunctionsClient.sol";
+import {Functions} from "./chainlink/dev/functions/Functions.sol";
+import {ConfirmedOwner} from "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 import {Reaper} from "./Reaper.sol";
 
 contract ReaperConsumer is FunctionsClient, ConfirmedOwner {
@@ -77,7 +77,7 @@ contract ReaperConsumer is FunctionsClient, ConfirmedOwner {
 
         uint256 score = uint256(bytes32(latestResponse));
 
-        reaper.chainlinkRes(score);
+        // reaper.chainlinkRes(score);
 
         emit OCRResponse(requestId, response, err);
     }
