@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.7;
 
 interface IInitData {
     /**
@@ -10,7 +10,6 @@ interface IInitData {
      */
     struct InitData {
         address baalDao;
-        address liquidationAsset;
         address liquidationTarget;
         uint256 interval;
         uint256 threshold;

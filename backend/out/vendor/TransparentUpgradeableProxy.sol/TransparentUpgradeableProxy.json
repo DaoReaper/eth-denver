@@ -1,0 +1,72 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/chainlink/dev/functions/vendor/TransparentUpgradeableProxy.sol",
+    "id": 5503,
+    "exportedSymbols": {
+      "Address": [
+        38600
+      ],
+      "ERC1967Proxy": [
+        36916
+      ],
+      "ERC1967Upgrade": [
+        37234
+      ],
+      "IBeacon": [
+        37296
+      ],
+      "IERC1822Proxiable": [
+        36799
+      ],
+      "Proxy": [
+        37286
+      ],
+      "StorageSlot": [
+        38756
+      ],
+      "TransparentUpgradeableProxy": [
+        37580
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "133:109:12",
+    "nodes": [
+      {
+        "id": 5501,
+        "nodeType": "PragmaDirective",
+        "src": "133:23:12",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 5502,
+        "nodeType": "ImportDirective",
+        "src": "158:83:12",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "file": "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5503,
+        "sourceUnit": 37581,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 12
+}

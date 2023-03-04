@@ -2,12 +2,12 @@
   "abi": [],
   "bytecode": {
     "object": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220058cfa5d2eb4912c9c96e3f4f25295b4631192fb1d48eb543b83a9de23e411a664736f6c63430008110033",
-    "sourceMap": "164:57:28:-:0;;;;;;;;;;;;;;;;;;;",
+    "sourceMap": "164:57:27:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x6080604052600080fdfea2646970667358221220058cfa5d2eb4912c9c96e3f4f25295b4631192fb1d48eb543b83a9de23e411a664736f6c63430008110033",
-    "sourceMap": "164:57:28:-:0;;;;;",
+    "sourceMap": "164:57:27:-:0;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -67,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
-    "id": 26469,
+    "id": 26488,
     "exportedSymbols": {
       "Enum": [
-        26468
+        26487
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "42:180:28",
+    "src": "42:180:27",
     "nodes": [
       {
-        "id": 26463,
+        "id": 26482,
         "nodeType": "PragmaDirective",
-        "src": "42:31:28",
+        "src": "42:31:27",
         "nodes": [],
         "literals": [
           "solidity",
@@ -92,34 +92,34 @@
         ]
       },
       {
-        "id": 26468,
+        "id": 26487,
         "nodeType": "ContractDefinition",
-        "src": "164:57:28",
+        "src": "164:57:27",
         "nodes": [
           {
-            "id": 26467,
+            "id": 26486,
             "nodeType": "EnumDefinition",
-            "src": "184:35:28",
+            "src": "184:35:27",
             "nodes": [],
             "canonicalName": "Enum.Operation",
             "members": [
               {
-                "id": 26465,
+                "id": 26484,
                 "name": "Call",
-                "nameLocation": "200:4:28",
+                "nameLocation": "200:4:27",
                 "nodeType": "EnumValue",
-                "src": "200:4:28"
+                "src": "200:4:27"
               },
               {
-                "id": 26466,
+                "id": 26485,
                 "name": "DelegateCall",
-                "nameLocation": "206:12:28",
+                "nameLocation": "206:12:27",
                 "nodeType": "EnumValue",
-                "src": "206:12:28"
+                "src": "206:12:27"
               }
             ],
             "name": "Operation",
-            "nameLocation": "189:9:28"
+            "nameLocation": "189:9:27"
           }
         ],
         "abstract": false,
@@ -128,22 +128,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 26464,
+          "id": 26483,
           "nodeType": "StructuredDocumentation",
-          "src": "75:89:28",
+          "src": "75:89:27",
           "text": "@title Enum - Collection of enums\n @author Richard Meissner - <richard@gnosis.pm>"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          26468
+          26487
         ],
         "name": "Enum",
-        "nameLocation": "173:4:28",
-        "scope": 26469,
+        "nameLocation": "173:4:27",
+        "scope": 26488,
         "usedErrors": []
       }
     ],
     "license": "LGPL-3.0-only"
   },
-  "id": 28
+  "id": 27
 }

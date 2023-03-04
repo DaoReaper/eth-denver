@@ -1,17 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.7;
 
-import {IERC20} from "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {Counters} from "../node_modules/@openzeppelin/contracts/utils/Counters.sol";
-import {Initializable} from "../node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import {IAvatar} from "../node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
-import "../node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
+import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import {IAvatar} from "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
+import "@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
 import {IBaal} from "./interfaces/IBaal.sol";
 import {IInitData} from "./interfaces/IInitData.sol";
 import {ReaperConsumer} from "./ReaperConsumer.sol";
-import {Functions} from "../node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol";
+import {Functions} from "./chainlink/dev/functions/Functions.sol";
 
 contract Reaper is IInitData, Initializable {
+    using Functions for Functions.Location;
     using Counters for Counters.Counter;
     Counters.Counter private _erc20Ids;
 
@@ -22,9 +23,6 @@ contract Reaper is IInitData, Initializable {
 
     // Chainlink Functions Consumer
     ReaperConsumer public consumer;
-
-    // stable coin for liquidation
-    IERC20 public liquidationAsset;
 
     // public good for liquidation
     address public liquidationTarget;
@@ -65,9 +63,6 @@ contract Reaper is IInitData, Initializable {
         // set address of the DAO treasury
         avatar = IAvatar(baal.avatar());
 
-        // set ERC20 stable coin exit asset
-        liquidationAsset = IERC20(initData.liquidationAsset);
-
         // set address of public good for donation
         liquidationTarget = initData.liquidationTarget;
 
@@ -79,6 +74,9 @@ contract Reaper is IInitData, Initializable {
 
         // set lastAnalysis to deployment time to begin window of analysis
         lastAnalysis = block.timestamp;
+
+        // set address of chainlink consumer
+        consumer = ReaperConsumer(chainlinkConsumer);
 
         // encode Zodiac-Module proposal
         bytes memory moduleData;
@@ -212,17 +210,17 @@ contract Reaper is IInitData, Initializable {
         // loop thru all erc20 assets to liquidate
         uint256 l = _erc20Ids.current();
         for (uint256 i = 0; i < l; i++) {
-            erc20token = safeERC20s[i];
+            IERC20 erc20token = IERC20(safeERC20s[i]);
             uint256 bal = erc20token.balanceOf(address(avatar));
 
             bytes memory tokenCall = abi.encodeWithSignature(
                 "transfer(address,uint256)",
                 liquidationTarget,
-                liquidationTotal
+                bal
             );
 
             avatar.execTransactionFromModule(
-                address(liquidationAsset),
+                address(erc20token),
                 0,
                 tokenCall,
                 Enum.Operation.Call
@@ -230,7 +228,9 @@ contract Reaper is IInitData, Initializable {
         }
 
         // liquidate ether
-        (bool success, ) = avatar.call{value: avatar.balance}("");
+        (bool success, ) = address(avatar).call{value: address(avatar).balance}(
+            ""
+        );
         require(success, "Ether tx failed");
     }
 
