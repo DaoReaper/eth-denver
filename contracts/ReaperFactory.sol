@@ -5,9 +5,12 @@ import "node_modules/@openzeppelin/contracts/proxy/Clones.sol";
 import {ERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {Reaper} from "contracts/Reaper.sol";
 import {IInitData} from "contracts/interfaces/IInitData.sol";
+import {ReaperConsumer} from "contracts/ReaperConsumer.sol";
 
 contract ReaperFactory is IInitData {
     address public reaperSingleton;
+
+    address public reaperConsumer = 0xeA6721aC65BCeD841B8ec3fc5fEdeA6141a0aDE4; // Mumbai
 
     ERC20 public linkToken = ERC20(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
 
@@ -27,16 +30,22 @@ contract ReaperFactory is IInitData {
     {
         address clone = Clones.clone(reaperSingleton);
 
-        Reaper(clone).initialize(initData);
+        // address chainlinkConsumer = address(new ReaperConsumer(reaperConsumer));
 
-        require(_fundLinkDeposit(clone), "Missing LINK deposit!");
+        address chainlinkConsumer = address(11);
+
+        Reaper(clone).initialize(initData, chainlinkConsumer);
+
+        // ReaperConsumer(chainlinkConsumer).init(clone);
+
+        require(_fundLinkDeposit(address(this)), "Missing LINK deposit!");
 
         emit newReaper(clone);
 
         return clone;
     }
 
-    function _fundLinkDeposit(address reaperClone) internal returns (bool) {
-        return testToken.transferFrom(msg.sender, reaperClone, linkDeposit);
+    function _fundLinkDeposit(address sponsor) internal returns (bool) {
+        return testToken.transferFrom(msg.sender, sponsor, linkDeposit);
     }
 }

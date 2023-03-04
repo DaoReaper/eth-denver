@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Reaper.sol": {
-      "lastModificationDate": 1677733768608,
-      "contentHash": "9213fdda075e938ecd74c46888638416",
+      "lastModificationDate": 1677886024821,
+      "contentHash": "e4065214df8d5146dd44cb4f820dda91",
       "sourceName": "contracts/Reaper.sol",
       "solcConfig": {
         "settings": {
@@ -45,11 +45,24 @@
         }
       },
       "imports": [
+        "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -60,9 +73,70 @@
         }
       }
     },
+    "contracts/ReaperConsumer.sol": {
+      "lastModificationDate": 1677887975204,
+      "contentHash": "27021b956292be864b27f563cc4a5063",
+      "sourceName": "contracts/ReaperConsumer.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
+        "contracts/interfaces/IBaal.sol",
+        "contracts/interfaces/IInitData.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "ReaperConsumer": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ReaperConsumer.sol/ReaperConsumer.json"
+        }
+      }
+    },
     "contracts/ReaperFactory.sol": {
-      "lastModificationDate": 1677626505459,
-      "contentHash": "eea395830fcf077766508e59e7f11345",
+      "lastModificationDate": 1677887118886,
+      "contentHash": "77284b6c654a3fb1a9d622b6d207fb31",
       "sourceName": "contracts/ReaperFactory.sol",
       "solcConfig": {
         "settings": {
@@ -94,8 +168,19 @@
       },
       "imports": [
         "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
@@ -103,6 +188,7 @@
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -154,8 +240,8 @@
       }
     },
     "contracts/interfaces/IInitData.sol": {
-      "lastModificationDate": 1677729450156,
-      "contentHash": "50880c26092d9e27e7978b65d72bdee4",
+      "lastModificationDate": 1677883766453,
+      "contentHash": "fcc694bb42927465ac73bd3a38df9013",
       "sourceName": "contracts/interfaces/IInitData.sol",
       "solcConfig": {
         "settings": {
@@ -190,6 +276,51 @@
       "artifacts": {
         "IInitData": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "IInitData.sol/IInitData.json"
+        }
+      }
+    },
+    "contracts/legacy/ICoWSwapEthFlow.sol": {
+      "lastModificationDate": 1677813931395,
+      "contentHash": "555d08c0f85bcdf7355d6f11fa4548f2",
+      "sourceName": "contracts/legacy/ICoWSwapEthFlow.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "EthFlowOrder": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ICoWSwapEthFlow.sol/EthFlowOrder.json"
+        },
+        "ICoWSwapEthFlow": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ICoWSwapEthFlow.sol/ICoWSwapEthFlow.json"
         }
       }
     },
@@ -715,6 +846,425 @@
         }
       }
     },
+    "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol": {
+      "lastModificationDate": 1677877772285,
+      "contentHash": "16d64572b0310127fc8a771e63be6d20",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ConfirmedOwner": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ConfirmedOwner.sol/ConfirmedOwner.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol": {
+      "lastModificationDate": 1677877772286,
+      "contentHash": "8b1c5f02622cd87472493bda6595d1be",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ConfirmedOwnerWithProposal": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ConfirmedOwnerWithProposal.sol/ConfirmedOwnerWithProposal.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol": {
+      "lastModificationDate": 1677877772324,
+      "contentHash": "f04835ddc41d13adaa0b01da6b200920",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol"
+      ],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "Functions": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Functions.sol/Functions.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol": {
+      "lastModificationDate": 1677877772325,
+      "contentHash": "da46e441cd0b887471b9a60fe9bd6f43",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol"
+      ],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "FunctionsClient": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FunctionsClient.sol/FunctionsClient.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol": {
+      "lastModificationDate": 1677877772325,
+      "contentHash": "dccf51427056f43cbbbc1a661489a20e",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "FunctionsBillingRegistryInterface": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FunctionsBillingRegistryInterface.sol/FunctionsBillingRegistryInterface.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol": {
+      "lastModificationDate": 1677877772326,
+      "contentHash": "dfac0f91964148ddd21bee85eee2a831",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "FunctionsClientInterface": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FunctionsClientInterface.sol/FunctionsClientInterface.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol": {
+      "lastModificationDate": 1677877772328,
+      "contentHash": "21a5c842bdc96a6653614d2f849db540",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol"
+      ],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "FunctionsOracleInterface": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "FunctionsOracleInterface.sol/FunctionsOracleInterface.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol": {
+      "lastModificationDate": 1677877772389,
+      "contentHash": "2e814c8a9f77897f6995436d97c23d99",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "OwnableInterface": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "OwnableInterface.sol/OwnableInterface.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol": {
+      "lastModificationDate": 1677877772273,
+      "contentHash": "52ac6f99fb0635751ae4ed11139878fd",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "BufferChainlink": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "BufferChainlink.sol/BufferChainlink.json"
+        }
+      }
+    },
+    "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol": {
+      "lastModificationDate": 1677877772275,
+      "contentHash": "99b3ee2c29bc0d1a5cba583d9e8d835e",
+      "sourceName": "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol"
+      ],
+      "versionRequirement": ">=0.4.19",
+      "artifacts": {
+        "CBORChainlink": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "CBORChainlink.sol/CBORChainlink.json"
+        }
+      }
+    },
     "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol": {
       "lastModificationDate": 1677608385286,
       "contentHash": "70d93d6b3e8b23f419fe3e529a43c17e",
@@ -1003,6 +1553,46 @@
         }
       }
     },
+    "node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1677532161623,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "node_modules/@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Counters": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Counters.sol/Counters.json"
+        }
+      }
+    },
     "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
       "lastModificationDate": 1677544447469,
       "contentHash": "fc5844e59776a976987884e4d9814c7d",
@@ -1085,6 +1675,85 @@
         }
       }
     },
+    "scripts/foundry/ConsumerInitiation.s.sol": {
+      "lastModificationDate": 1677888892599,
+      "contentHash": "3144fffe9d1f384ed9240ae19d8dd3d4",
+      "sourceName": "scripts/foundry/ConsumerInitiation.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
+        "contracts/ReaperFactory.sol",
+        "contracts/interfaces/IBaal.sol",
+        "contracts/interfaces/IInitData.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
+        "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+        "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "scripts/foundry/utils/ScriptHelper.s.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "ConsumerInitiation": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ConsumerInitiation.s.sol/ConsumerInitiation.json"
+        }
+      }
+    },
     "scripts/foundry/DeployFactory.s.sol": {
       "lastModificationDate": 1677540478299,
       "contentHash": "bfbf793d6e048341a2c3cc087bd3f01a",
@@ -1119,6 +1788,7 @@
       },
       "imports": [
         "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/ReaperFactory.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
@@ -1134,6 +1804,16 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
@@ -1141,6 +1821,7 @@
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -1152,8 +1833,8 @@
       }
     },
     "scripts/foundry/ReaperInitiation.s.sol": {
-      "lastModificationDate": 1677729502676,
-      "contentHash": "d2a59369a4d7630450cabf577d45cac2",
+      "lastModificationDate": 1677889371004,
+      "contentHash": "26c9af2ecad4d056fb9f217acafae36a",
       "sourceName": "scripts/foundry/ReaperInitiation.s.sol",
       "solcConfig": {
         "settings": {
@@ -1185,6 +1866,7 @@
       },
       "imports": [
         "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/ReaperFactory.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
@@ -1200,6 +1882,16 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
@@ -1207,6 +1899,7 @@
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
         "scripts/foundry/utils/ScriptHelper.s.sol"
@@ -1215,6 +1908,64 @@
       "artifacts": {
         "ReaperInitiationScript": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "ReaperInitiation.s.sol/ReaperInitiationScript.json"
+        }
+      }
+    },
+    "scripts/foundry/test/CowEthFlow.s.sol": {
+      "lastModificationDate": 1677877494886,
+      "contentHash": "d8bd9cdabc86ed48822d2452764ac19c",
+      "sourceName": "scripts/foundry/test/CowEthFlow.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/legacy/ICoWSwapEthFlow.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "CowEthFlow": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "CowEthFlow.s.sol/CowEthFlow.json"
         }
       }
     },
@@ -1277,8 +2028,8 @@
       }
     },
     "scripts/foundry/test/InitSuccess.s.sol": {
-      "lastModificationDate": 1677617415979,
-      "contentHash": "bea258099d3597c8261c23a3e8b65847",
+      "lastModificationDate": 1677811640320,
+      "contentHash": "fbbc60081475d2e186698b812a5e6d2e",
       "sourceName": "scripts/foundry/test/InitSuccess.s.sol",
       "solcConfig": {
         "settings": {
@@ -1310,6 +2061,7 @@
       },
       "imports": [
         "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
         "lib/forge-std/src/Base.sol",
@@ -1324,9 +2076,20 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],
@@ -1439,8 +2202,8 @@
       }
     },
     "scripts/foundry/utils/ScriptHelper.s.sol": {
-      "lastModificationDate": 1677734031406,
-      "contentHash": "e9e19562460501b8c91bab5509995b2c",
+      "lastModificationDate": 1677889594992,
+      "contentHash": "5d959a70fcc7ab0b177f158e15a646af",
       "sourceName": "scripts/foundry/utils/ScriptHelper.s.sol",
       "solcConfig": {
         "settings": {
@@ -1472,6 +2235,7 @@
       },
       "imports": [
         "contracts/Reaper.sol",
+        "contracts/ReaperConsumer.sol",
         "contracts/ReaperFactory.sol",
         "contracts/interfaces/IBaal.sol",
         "contracts/interfaces/IInitData.sol",
@@ -1487,6 +2251,16 @@
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwner.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/ConfirmedOwnerWithProposal.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/Functions.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/functions/FunctionsClient.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsBillingRegistryInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsClientInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/dev/interfaces/FunctionsOracleInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/interfaces/OwnableInterface.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
+        "node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
         "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "node_modules/@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
         "node_modules/@openzeppelin/contracts/proxy/Clones.sol",
@@ -1494,6 +2268,7 @@
         "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "node_modules/@openzeppelin/contracts/utils/Counters.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
       ],

@@ -7,16 +7,16 @@ import {Reaper} from "contracts/Reaper.sol";
 import {IBaal} from "contracts/interfaces/IBaal.sol";
 
 // BROADCAST
-// forge script scripts/foundry/test/InitSuccess.s.sol:InitSuccessScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv
+// forge script scripts/foundry/test/InitSuccess.s.sol:InitSuccessScript --rpc-url $RU --private-key $PK --broadcast -vvvv
 
 // SIMULATE
 // forge script scripts/foundry/test/InitSuccess.s.sol:InitSuccessScript --rpc-url $RU --private-key $PK -vvvv
 
 contract InitSuccessScript is Script {
-    Reaper public reaper = Reaper(0x7a9B785aDcA22ED15dFFaED5ef13D61C0524Ee38);
+    Reaper public reaper = Reaper(0xE2F1F9798E03C94b685a0597046aad702DbA7ACE);
 
     // Baal DAO and Avatar (treasury) address
-    IBaal public baal = IBaal(0xe6A491f18f366AAcf6145830271009B5689373DB);
+    IBaal public baal = IBaal(0xB0E6081785E339e0F7b8627d1820f7CCC316A03a);
     IAvatar public avatar = IAvatar(baal.avatar());
 
     function isModule() internal view returns (bool) {
@@ -30,9 +30,9 @@ contract InitSuccessScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        isModule();
+        require(isModule(), "Not Module!");
 
-        isShaman();
+        require(isShaman(), "Not Shaman!");
 
         vm.stopBroadcast();
     }

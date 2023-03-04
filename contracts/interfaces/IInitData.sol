@@ -13,6 +13,6 @@ interface IInitData {
         address liquidationAsset;
         address liquidationTarget;
         uint256 interval;
-        bool reputationReaper;
+        uint256 threshold;
     }
 }
