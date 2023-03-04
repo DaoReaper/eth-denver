@@ -1,4 +1,3 @@
-// import { Routes as Router, Route } from "react-router-dom";
 import {
   matchPath,
   useLocation,
@@ -22,6 +21,8 @@ import { MULTI_DAO_ROUTER } from "@daohaus/moloch-v3-hooks";
 import { ReactSetter } from "@daohaus/utils";
 import { DaoContainer } from "./layout/DaoContainer";
 import { DaoOverview } from "./pages/DaoOverview";
+import { HomeContainer } from "./layout/HomeContainer";
+import SummonReaper from "./pages/SummonReaper";
 
 const routePath = `molochv3/${
   TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID
@@ -36,9 +37,10 @@ export const Routes = ({
   const pathMatch = matchPath("molochv3/:daochain/:daoid/*", location.pathname);
   return (
     <RoutesDom>
-      {/* <Route path="/" element={<HomeContainer />}> */}
-      <Route path="/" element={<Home />} />
-      {/* </Route> */}
+      <Route path="/" element={<HomeContainer />}>
+        <Route path="/" element={<Home />} />
+        <Route path="summon" element={<SummonReaper />} />
+      </Route>
       <Route path={MULTI_DAO_ROUTER} element={<DaoContainer />}>
         <Route index element={<DaoOverview />} />
         <Route path="proposals" element={<Proposals />} />
