@@ -22,6 +22,7 @@ import { MULTI_DAO_ROUTER } from "@daohaus/moloch-v3-hooks";
 import { ReactSetter } from "@daohaus/utils";
 import { DaoContainer } from "./layout/DaoContainer";
 import { DaoOverview } from "./pages/DaoOverview";
+import { DaoList } from "./pages/DaoList";
 
 const routePath = `molochv3/${
   TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID
@@ -37,7 +38,7 @@ export const Routes = ({
   return (
     <RoutesDom>
       {/* <Route path="/" element={<HomeContainer />}> */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<DaoList />} />
       {/* </Route> */}
       <Route path={MULTI_DAO_ROUTER} element={<DaoContainer />}>
         <Route index element={<DaoOverview />} />
