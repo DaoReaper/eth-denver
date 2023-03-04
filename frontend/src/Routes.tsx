@@ -1,4 +1,10 @@
-import { Routes as Router, Route } from "react-router-dom";
+// import { Routes as Router, Route } from "react-router-dom";
+import {
+  matchPath,
+  useLocation,
+  Routes as RoutesDom,
+  Route,
+} from "react-router-dom";
 import { FormTest } from "./pages/FormTest";
 import { Home } from "./pages/Home";
 import { LayoutContainer } from "./components/LayoutContainer";
@@ -11,32 +17,37 @@ import { Members } from "./pages/Members";
 import { Member } from "./pages/Member";
 import { TARGET_DAO } from "./targetDao";
 import RageQuit from "./pages/RageQuit";
+import { MULTI_DAO_ROUTER } from "@daohaus/moloch-v3-hooks";
+
+import { ReactSetter } from "@daohaus/utils";
+import { DaoContainer } from "./layout/DaoContainer";
+import { DaoOverview } from "./pages/DaoOverview";
 
 const routePath = `molochv3/${
   TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID
 }/${TARGET_DAO[import.meta.env.VITE_TARGET_KEY].ADDRESS}`;
 
-export const Routes = () => {
+export const Routes = ({
+  setDaoChainId,
+}: {
+  setDaoChainId: ReactSetter<string | undefined>;
+}) => {
+  const location = useLocation();
+  const pathMatch = matchPath("molochv3/:daochain/:daoid/*", location.pathname);
   return (
-    <Router>
-      <Route path="/" element={<LayoutContainer />}>
-        <Route index element={<Home />} />
-        <Route path={`${routePath}/formtest`} element={<FormTest />} />
-        <Route path={`${routePath}/dao`} element={<Dao />} />
-        <Route path={`${routePath}/safes`} element={<Safes />} />
-        <Route path={`${routePath}/settings`} element={<Settings />} />
-        <Route path={`${routePath}/proposals/`} element={<Proposals />} />
-        <Route
-          path={`${routePath}/proposal/:proposalId`}
-          element={<Proposal />}
-        />
-        <Route path={`${routePath}/members/`} element={<Members />} />
-        <Route
-          path={`${routePath}/member/:memberAddress`}
-          element={<Member />}
-        />
-        <Route path={`${routePath}/members/ragequit`} element={<RageQuit />} />
+    <RoutesDom>
+      {/* <Route path="/" element={<HomeContainer />}> */}
+      <Route path="/" element={<Home />} />
+      {/* </Route> */}
+      <Route path={MULTI_DAO_ROUTER} element={<DaoContainer />}>
+        <Route index element={<DaoOverview />} />
+        <Route path="proposals" element={<Proposals />} />
+        <Route path="members" element={<Members />} />
+        <Route path="safes" element={<Safes />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="proposal/:proposalId" element={<Proposal />} />
+        <Route path="member/:memberAddress" element={<Member />} />
       </Route>
-    </Router>
+    </RoutesDom>
   );
 };
