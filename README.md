@@ -6,22 +6,39 @@ Welcome to the DAO Reaper
 Below you will find a user guide to the DAO Reaper (also interchangeably “Reaper”) smart contract:
 
 Table of contents:
+
 Overview
+
 About the team behind the project
+
 Problem
+
 Solution
+
 Conceptual step by step explanation
+
 Tech stack + flow chart (+claims to bounties)
-Why Polygon?
-Why DAOhaus?
-Why Chainlink?
-Why CoW Swap?
-Public goods (Giveth)
+
+	Why Polygon?
+	
+	Why DAOhaus?
+	
+	Why Chainlink?
+	
+	Why CoW Swap?
+	
+	Public goods (Giveth)
+	
 Metrics used
+
 On-chain metrics
+
 Reputation score
+
 Data sources on DAOs
+
 Future Scope
+
 Sources
 
 
