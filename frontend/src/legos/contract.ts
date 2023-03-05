@@ -2,6 +2,7 @@ import { LOCAL_ABI } from "@daohaus/abis";
 import { ContractLego } from "@daohaus/utils";
 import { CONTRACT_KEYCHAINS } from "@daohaus/keychain-utils";
 import CheckInV2 from "../abis/CheckInV2.json";
+import ReaperFactory from "../abis/ReaperFactory.json";
 
 export const APP_CONTRACT: Record<string, ContractLego> = {
   POSTER: {
@@ -55,5 +56,15 @@ export const APP_CONTRACT: Record<string, ContractLego> = {
     contractName: "CHECKIN_V2",
     abi: CheckInV2,
     targetAddress: ".shamanAddress",
+  },
+  REAPER_FACTORY: {
+    type: "static",
+    contractName: "REAPER_FACTORY",
+    abi: ReaperFactory.abi,
+    targetAddress: {
+      "0x1": "0xe166F4b1CEe2bA48C9a1eA687e712f4aA4d6F7e1",
+      "0x5": "0xe166F4b1CEe2bA48C9a1eA687e712f4aA4d6F7e1",
+      "0x64": "0xe166F4b1CEe2bA48C9a1eA687e712f4aA4d6F7e1",
+    },
   },
 };

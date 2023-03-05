@@ -8,7 +8,7 @@ import { AppFieldLookup } from "../legos/fieldConfig";
 export const FormTest = () => {
   return (
     <FormBuilder
-      form={APP_FORM.SIGNAL}
+      form={APP_FORM.REAPER}
       targetNetwork={TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID}
       customFields={{ ...MolochFields, ...AppFieldLookup }}
     />

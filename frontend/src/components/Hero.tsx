@@ -78,11 +78,11 @@ const Hero = () => {
           DAO REAPER
         </text>
       </svg>
-      <RouterLink to="/summon">
+      {/* <RouterLink to="/summon">
         <Button color="secondary" variant="outline">
           Summon
         </Button>
-      </RouterLink>
+      </RouterLink> */}
     </HeroContainer>
   );
 };

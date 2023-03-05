@@ -47,6 +47,33 @@ export const APP_FIELD: Record<string, CustomFieldLego> = {
     placeholder: "I am being held hostage by a cult",
     info: "What is getting in your way?",
   },
+  BALL_ADDRESS: {
+    id: "baalDao",
+    type: "input",
+    label: "DAO Address",
+    placeholder: "DAO Address.",
+  },
+  LIQUIDATION_TARGET: {
+    id: "liquidationTarget",
+    type: "input",
+    label: "Liquidation Target",
+    placeholder: "Enter the desired address to liquidate to.",
+    info: "The DAO will liquidate if the total value of the DAO drops below this threshold.",
+  },
+  INTERVAL: {
+    id: "interval",
+    type: "timePicker",
+    label: "Interval",
+    placeholder: "Enter the desired interval.",
+    info: "The interval.",
+  },
+  THRESHOLD: {
+    id: "threshold",
+    type: "input",
+    label: "Liquidation Threshold",
+    placeholder: "Enter the desired threshold the DAO should stay above.",
+    info: "The DAO will liquidate if the total value of the DAO drops below this threshold.",
+  },
   CLAIM_BUILDER: {
     id: "claimBuilder",
     type: "claimBuilder",

@@ -1,4 +1,4 @@
-import { POSTER_TAGS } from "@daohaus/utils";
+import { POSTER_TAGS, TXLego } from "@daohaus/utils";
 import { buildMultiCallTX } from "@daohaus/tx-builder";
 import { APP_CONTRACT } from "./contract";
 
@@ -14,6 +14,25 @@ export enum ProposalTypeIds {
   GuildKick = "GUILDKICK",
   WalletConnect = "WALLETCONNECT",
 }
+
+export const REAPER_TX: Record<string, TXLego> = {
+  CREATE_REAPER: {
+    id: "CREATE_REAPER",
+    contract: APP_CONTRACT.REAPER_FACTORY,
+    method: "post",
+    args: [
+      {
+        type: "JSONDetails",
+        jsonSchema: {
+          baalDao: `.formValues.baalDao`,
+          liquidationTarget: `.formValues.liquidationTarget`,
+          interval: `.formValues.interval`,
+          threshold: `.formValues.threshold`,
+        },
+      },
+    ],
+  },
+};
 
 export const APP_TX = {
   POST_SIGNAL: buildMultiCallTX({

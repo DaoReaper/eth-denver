@@ -44,6 +44,7 @@ export const Routes = ({
       <Route path={MULTI_DAO_ROUTER} element={<DaoContainer />}>
         <Route index element={<DaoOverview />} />
         <Route path="proposals" element={<Proposals />} />
+        <Route path="formtest" element={<FormTest />} />
         <Route path="members" element={<Members />} />
         <Route path="safes" element={<Safes />} />
         <Route path="settings" element={<Settings />} />

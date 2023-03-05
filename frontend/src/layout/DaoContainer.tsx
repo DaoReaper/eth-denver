@@ -2,15 +2,20 @@ import { DHLayout, useDHConnect } from "@daohaus/connect";
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import { CurrentDaoProvider } from "@daohaus/moloch-v3-hooks";
 import { ValidNetwork } from "@daohaus/keychain-utils";
+import { TXBuilder } from "@daohaus/tx-builder";
+import { useConnectedMember, useDao } from "@daohaus/moloch-v3-context";
 
 export const DaoContainer = () => {
-  const { address } = useDHConnect();
+  const { provider, address } = useDHConnect();
   const { daoChain, daoId, proposalId, memberAddress } = useParams<{
     daoChain: ValidNetwork;
     daoId: string;
     proposalId: string;
     memberAddress: string;
   }>();
+
+  const { dao } = useDao();
+  const { connectedMember } = useConnectedMember();
 
   const location = useLocation();
 
@@ -44,7 +49,15 @@ export const DaoContainer = () => {
           memberAddress,
         }}
       >
-        <Outlet />
+        <TXBuilder
+          chainId={daoChain}
+          provider={provider}
+          safeId={"0xd9e031ea12e8e9327fcdfc433f0a3a9458f98c7c"}
+          daoId={daoId}
+          appState={{ dao, memberAddress: address }}
+        >
+          <Outlet />
+        </TXBuilder>
       </CurrentDaoProvider>
     </DHLayout>
   );
