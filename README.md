@@ -1,5 +1,10 @@
-# eth-denver
-ETH Denver 2023 Hackathon
+# ETH Denver 2023 Hackathon
+
+DAO Reaper README
+
+For formatted view with diagrams check the docx file below:
+
+[README.docx](https://github.com/DaoReaper/eth-denver/files/10891470/README.docx)
 
 Welcome to the DAO Reaper
 
@@ -88,7 +93,9 @@ Tech stack and flow chart (+ bounties explanation)
 
 
 We are using different types of products in the ecosystem for make the DAO Reaper:
+
 Polygon: main chain for deployment
+
 Why Polygon?
   Polygon has a large community
   A wide coverage of various industries in the Web3 space, which enables compatibility with other components we are using in this project
