@@ -6,7 +6,12 @@ export default ({ mode }) => {
   Object.assign(process.env, loadEnv(mode, process.cwd()));
 
   return defineConfig({
-    plugins: [svgr(), react()],
+    plugins: [
+      svgr({
+        include: "**/*.svg",
+      }),
+      react(),
+    ],
     define: {
       "process.env": {
         NX_RIVET_KEY: process.env.VITE_RIVET_KEY,

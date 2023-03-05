@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as ReaperLogo } from "../assets/reaper.svg";
-import { RouterLink } from "./RouterLink";
+// import { ReactComponent as ReaperLogo } from "../assets/reaper.svg";
+import { Link as RLink } from "react-router-dom";
 import { Button } from "@daohaus/ui";
 
 const HeroContainer = styled.div`
@@ -24,7 +24,7 @@ const HeroContainer = styled.div`
 const Hero = () => {
   return (
     <HeroContainer>
-      <ReaperLogo height={350} opacity={0.4} />
+      {/* <ReaperLogo height={350} opacity={0.4} /> */}
       <svg viewBox="0 0 100 20">
         <defs>
           <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
@@ -78,11 +78,11 @@ const Hero = () => {
           DAO REAPER
         </text>
       </svg>
-      {/* <RouterLink to="/summon">
+      <RLink to="/summon">
         <Button color="secondary" variant="outline">
           Summon
         </Button>
-      </RouterLink> */}
+      </RLink>
     </HeroContainer>
   );
 };

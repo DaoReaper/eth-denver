@@ -16,22 +16,52 @@ export enum ProposalTypeIds {
 }
 
 export const REAPER_TX: Record<string, TXLego> = {
-  CREATE_REAPER: {
+  POST_SIGNAL: buildMultiCallTX({
     id: "CREATE_REAPER",
-    contract: APP_CONTRACT.REAPER_FACTORY,
-    method: "post",
-    args: [
+    JSONDetails: {
+      type: "JSONDetails",
+      jsonSchema: {
+        baalDao: `.formValues.baalDao`,
+        liquidationTarget: `.formValues.liquidationTarget`,
+        interval: `.formValues.interval`,
+        threshold: `.formValues.threshold`,
+      },
+    },
+    actions: [
       {
-        type: "JSONDetails",
-        jsonSchema: {
-          baalDao: `.formValues.baalDao`,
-          liquidationTarget: `.formValues.liquidationTarget`,
-          interval: `.formValues.interval`,
-          threshold: `.formValues.threshold`,
-        },
+        contract: APP_CONTRACT.POSTER,
+        method: "post",
+        args: [
+          {
+            type: "JSONDetails",
+            jsonSchema: {
+              baalDao: `.formValues.baalDao`,
+              liquidationTarget: `.formValues.liquidationTarget`,
+              interval: `.formValues.interval`,
+              threshold: `.formValues.threshold`,
+            },
+          },
+          { type: "static", value: POSTER_TAGS.signalProposal },
+        ],
       },
     ],
-  },
+  }),
+  // CREATE_REAPER: {
+  //   id: "CREATE_REAPER",
+  //   contract: APP_CONTRACT.REAPER_FACTORY,
+  //   method: "post",
+  //   args: [
+  //     {
+  //       type: "JSONDetails",
+  //       jsonSchema: {
+  //         baalDao: `.formValues.baalDao`,
+  //         liquidationTarget: `.formValues.liquidationTarget`,
+  //         interval: `.formValues.interval`,
+  //         threshold: `.formValues.threshold`,
+  //       },
+  //     },
+  //   ],
+  // },
 };
 
 export const APP_TX = {
