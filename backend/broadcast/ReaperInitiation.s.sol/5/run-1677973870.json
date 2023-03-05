@@ -1,0 +1,67 @@
+{
+  "transactions": [
+    {
+      "hash": "0x558c73cdb6ce5e3a3916de1fb8b279c6419b726c29dc6d65deddd89cbceca227",
+      "transactionType": "CALL",
+      "contractName": "FuturoToken",
+      "contractAddress": "0xA49dF10dD5B84257dE634F4350218f615471Fc69",
+      "function": "approve(address,uint256):(bool)",
+      "arguments": [
+        "0x7b17360FA0F295011649FC32ACd292BB98A76f0C",
+        "1000000000000000000"
+      ],
+      "rpc": "https://eth-goerli.g.alchemy.com/v2/49Z_NgeD3j-WxnHQzifUkHA_IZUCKyrZ",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xd5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e",
+        "to": "0xa49df10dd5b84257de634f4350218f615471fc69",
+        "gas": "0xf998",
+        "value": "0x0",
+        "data": "0x095ea7b30000000000000000000000007b17360fa0f295011649fc32acd292bb98a76f0c0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "nonce": "0x4a",
+        "accessList": []
+      },
+      "additionalContracts": []
+    },
+    {
+      "hash": "0x42af6c1b1eb67ce2c05c7a0c3db6f179ca0b4c95d3be37797c76aa65c4c513c2",
+      "transactionType": "CALL",
+      "contractName": "ReaperFactory",
+      "contractAddress": "0x7b17360FA0F295011649FC32ACd292BB98A76f0C",
+      "function": "deployReaper((address,address,uint256,uint256)):(address)",
+      "arguments": [
+        "(0x49590a95121b2820Cf4E0741F4227dDf52f4992E, 0xD5d1bb95259Fe2c5a84da04D1Aa682C71A1B8C0E, 60, 70)"
+      ],
+      "rpc": "https://eth-goerli.g.alchemy.com/v2/49Z_NgeD3j-WxnHQzifUkHA_IZUCKyrZ",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xd5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e",
+        "to": "0x7b17360fa0f295011649fc32acd292bb98a76f0c",
+        "gas": "0xac08f",
+        "value": "0x0",
+        "data": "0xc4d1fca000000000000000000000000049590a95121b2820cf4e0741f4227ddf52f4992e000000000000000000000000d5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e000000000000000000000000000000000000000000000000000000000000003c0000000000000000000000000000000000000000000000000000000000000046",
+        "nonce": "0x4b",
+        "accessList": []
+      },
+      "additionalContracts": [
+        {
+          "transactionType": "CREATE",
+          "address": "0xcC49D9F5d7C329A10db9Fb7575E20f616c6146D9",
+          "initCode": "3d602d80600a3d3981f3363d3d373d3d3d363d7374a7a1794fb53af9c9d660ada2e082636994f53a5af43d82803e903d91602b57fd5bf3"
+        }
+      ]
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x558c73cdb6ce5e3a3916de1fb8b279c6419b726c29dc6d65deddd89cbceca227",
+    "0x42af6c1b1eb67ce2c05c7a0c3db6f179ca0b4c95d3be37797c76aa65c4c513c2"
+  ],
+  "path": "/Users/hunterking/Desktop/ethDenHack/eth-denver/backend/broadcast/ReaperInitiation.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1677973870,
+  "chain": 5,
+  "multi": false,
+  "commit": "dd39b3d"
+}

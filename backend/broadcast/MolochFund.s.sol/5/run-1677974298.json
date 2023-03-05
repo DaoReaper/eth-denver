@@ -1,0 +1,37 @@
+{
+  "transactions": [
+    {
+      "hash": "0xbdcc80f139d8725d02ca2e150db00f83996befd05fe9acc51f85040013000c1d",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x6A505a5A69e362fE2a30660bCF6535cC16Cf1421",
+      "function": "addSafeHoldings(address[])",
+      "arguments": [
+        "[0x91056D4A53E1faa1A84306D4deAEc71085394bC8, 0xA49dF10dD5B84257dE634F4350218f615471Fc69, 0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30, 0xD87Ba7A50B2E7E660f678A895E4B72E7CB4CCd9C]"
+      ],
+      "rpc": "https://eth-goerli.g.alchemy.com/v2/49Z_NgeD3j-WxnHQzifUkHA_IZUCKyrZ",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xd5d1bb95259fe2c5a84da04d1aa682c71a1b8c0e",
+        "to": "0x6a505a5a69e362fe2a30660bcf6535cc16cf1421",
+        "gas": "0x2a117",
+        "value": "0x0",
+        "data": "0x61b0ff070000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000400000000000000000000000091056d4a53e1faa1a84306d4deaec71085394bc8000000000000000000000000a49df10dd5b84257de634f4350218f615471fc69000000000000000000000000ba7c8d4a583375a3104f251bf40abd5ff2953e30000000000000000000000000d87ba7a50b2e7e660f678a895e4b72e7cb4ccd9c",
+        "nonce": "0x4e",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0xbdcc80f139d8725d02ca2e150db00f83996befd05fe9acc51f85040013000c1d"
+  ],
+  "path": "/Users/hunterking/Desktop/ethDenHack/eth-denver/backend/broadcast/MolochFund.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1677974298,
+  "chain": 5,
+  "multi": false,
+  "commit": "dd39b3d"
+}

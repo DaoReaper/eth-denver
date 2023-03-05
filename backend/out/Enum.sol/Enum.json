@@ -67,17 +67,17 @@
   },
   "ast": {
     "absolutePath": "node_modules/@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
-    "id": 26488,
+    "id": 26510,
     "exportedSymbols": {
       "Enum": [
-        26487
+        26509
       ]
     },
     "nodeType": "SourceUnit",
     "src": "42:180:27",
     "nodes": [
       {
-        "id": 26482,
+        "id": 26504,
         "nodeType": "PragmaDirective",
         "src": "42:31:27",
         "nodes": [],
@@ -92,26 +92,26 @@
         ]
       },
       {
-        "id": 26487,
+        "id": 26509,
         "nodeType": "ContractDefinition",
         "src": "164:57:27",
         "nodes": [
           {
-            "id": 26486,
+            "id": 26508,
             "nodeType": "EnumDefinition",
             "src": "184:35:27",
             "nodes": [],
             "canonicalName": "Enum.Operation",
             "members": [
               {
-                "id": 26484,
+                "id": 26506,
                 "name": "Call",
                 "nameLocation": "200:4:27",
                 "nodeType": "EnumValue",
                 "src": "200:4:27"
               },
               {
-                "id": 26485,
+                "id": 26507,
                 "name": "DelegateCall",
                 "nameLocation": "206:12:27",
                 "nodeType": "EnumValue",
@@ -128,18 +128,18 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 26483,
+          "id": 26505,
           "nodeType": "StructuredDocumentation",
           "src": "75:89:27",
           "text": "@title Enum - Collection of enums\n @author Richard Meissner - <richard@gnosis.pm>"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          26487
+          26509
         ],
         "name": "Enum",
         "nameLocation": "173:4:27",
-        "scope": 26488,
+        "scope": 26510,
         "usedErrors": []
       }
     ],

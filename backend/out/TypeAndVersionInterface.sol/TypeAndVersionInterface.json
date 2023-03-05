@@ -97,19 +97,19 @@
   },
   "ast": {
     "absolutePath": "node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol",
-    "id": 34992,
+    "id": 34208,
     "exportedSymbols": {
       "TypeAndVersionInterface": [
-        34991
+        34207
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:146:52",
+    "src": "32:146:47",
     "nodes": [
       {
-        "id": 34985,
+        "id": 34201,
         "nodeType": "PragmaDirective",
-        "src": "32:23:52",
+        "src": "32:23:47",
         "nodes": [],
         "literals": [
           "solidity",
@@ -119,40 +119,40 @@
         ]
       },
       {
-        "id": 34991,
+        "id": 34207,
         "nodeType": "ContractDefinition",
-        "src": "57:120:52",
+        "src": "57:120:47",
         "nodes": [
           {
-            "id": 34990,
+            "id": 34206,
             "nodeType": "FunctionDefinition",
-            "src": "103:72:52",
+            "src": "103:72:47",
             "nodes": [],
             "functionSelector": "181f5a77",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "typeAndVersion",
-            "nameLocation": "112:14:52",
+            "nameLocation": "112:14:47",
             "parameters": {
-              "id": 34986,
+              "id": 34202,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "126:2:52"
+              "src": "126:2:47"
             },
             "returnParameters": {
-              "id": 34989,
+              "id": 34205,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 34988,
+                  "id": 34204,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 34990,
-                  "src": "160:13:52",
+                  "scope": 34206,
+                  "src": "160:13:47",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -160,10 +160,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 34987,
+                    "id": 34203,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "160:6:52",
+                    "src": "160:6:47",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -172,9 +172,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "159:15:52"
+              "src": "159:15:47"
             },
-            "scope": 34991,
+            "scope": 34207,
             "stateMutability": "pure",
             "virtual": true,
             "visibility": "external"
@@ -187,15 +187,15 @@
         "contractKind": "contract",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          34991
+          34207
         ],
         "name": "TypeAndVersionInterface",
-        "nameLocation": "75:23:52",
-        "scope": 34992,
+        "nameLocation": "75:23:47",
+        "scope": 34208,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 52
+  "id": 47
 }

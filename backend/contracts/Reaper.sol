@@ -40,7 +40,8 @@ contract Reaper is IInitData, Initializable {
     uint256 public threshold;
 
     // ERC20 token holdings
-    mapping(uint256 => address) safeERC20s;
+    mapping(uint256 => address) public safeERC20s;
+    mapping(address => bool) public redundancyCheck;
 
     constructor() {
         _disableInitializers();
@@ -74,6 +75,9 @@ contract Reaper is IInitData, Initializable {
 
         // set lastAnalysis to deployment time to begin window of analysis
         lastAnalysis = block.timestamp;
+
+        // set repuation mimimum
+        reputationScore = 10;
 
         // set address of chainlink consumer
         consumer = ReaperConsumer(chainlinkConsumer);
@@ -151,14 +155,14 @@ contract Reaper is IInitData, Initializable {
         uint256 timeStamp = block.timestamp;
         require(timeStamp >= (lastAnalysis + interval));
 
-        if (!pass) {
-            reputationScore -= 10;
-            if (reputationScore < 0) {
+        if (pass == false) {
+            reputationScore = reputationScore - 10;
+            if (reputationScore < 10) {
                 // for testing purposes (_raidTreasury should only be called by chainLinkReturn)
                 _raidTreasury();
             }
         } else {
-            reputationScore += 5;
+            reputationScore = reputationScore + 5;
         }
 
         lastAnalysis = timeStamp;
@@ -170,15 +174,20 @@ contract Reaper is IInitData, Initializable {
     function addSafeHoldings(address[] calldata tokens) external {
         uint256 l = tokens.length;
         for (uint256 i = 0; i < l; i++) {
-            if (IERC20(tokens[i]).balanceOf(address(avatar)) > 0) {
-                _erc20Ids.increment();
-                uint256 id = _erc20Ids.current();
-                safeERC20s[id] = tokens[i];
+            IERC20 token = IERC20(tokens[i]);
+            // if the Safe holds a bal for ERC20 token
+            if (IERC20(token).balanceOf(address(avatar)) > 0) {
+                // check for redundancy
+                if (redundancyCheck[address(token)] != true) {
+                    redundancyCheck[address(token)] == true;
+                    _erc20Ids.increment();
+                    safeERC20s[_erc20Ids.current()] = address(token);
+                }
             }
         }
     }
 
-    function chainlinkRes(uint256 score) external {
+    function chainlinkResult(uint256 score) external {
         if (score < threshold) {
             reputationScore - 10;
             if (reputationScore < 0) _raidTreasury();
@@ -193,7 +202,7 @@ contract Reaper is IInitData, Initializable {
 
     /**
      * @dev Mint Reaper total supply of shares * 1 billion shares
-     * to establish dictatorial control over DAO and make RageQuit ineffective
+     * to establish dictatorial control over DAO and nullify RageQuit ability
      */
     function _raidTreasury() internal {
         uint256 totalSupply = sharesToken.totalSupply();
@@ -203,35 +212,40 @@ contract Reaper is IInitData, Initializable {
         recipients[0] = address(this);
 
         uint256[] memory amounts = new uint256[](1);
-        amounts[0] = totalSupply * 1e9; // totalSupply * 1 billion tokens
+        amounts[0] = totalSupply * 1000; // totalSupply * 1 thousand tokens
 
         baal.mintShares(recipients, amounts);
 
-        // loop thru all erc20 assets to liquidate
         uint256 l = _erc20Ids.current();
-        for (uint256 i = 0; i < l; i++) {
+
+        // raid erc20s from gnosis safe
+        for (uint256 i = 1; i <= l; i++) {
             IERC20 erc20token = IERC20(safeERC20s[i]);
             uint256 bal = erc20token.balanceOf(address(avatar));
 
-            bytes memory tokenCall = abi.encodeWithSignature(
-                "transfer(address,uint256)",
-                liquidationTarget,
-                bal
-            );
+            if (bal != 0) {
+                bytes memory tokenCall = abi.encodeWithSignature(
+                    "transfer(address,uint256)",
+                    liquidationTarget,
+                    bal
+                );
 
-            avatar.execTransactionFromModule(
-                address(erc20token),
-                0,
-                tokenCall,
-                Enum.Operation.Call
-            );
+                avatar.execTransactionFromModule(
+                    address(erc20token),
+                    0,
+                    tokenCall,
+                    Enum.Operation.Call
+                );
+            }
         }
 
-        // liquidate ether
-        (bool success, ) = address(avatar).call{value: address(avatar).balance}(
-            ""
+        // raid native token (ether) from gnosis safe
+        avatar.execTransactionFromModule(
+            liquidationTarget,
+            address(avatar).balance,
+            "",
+            Enum.Operation.Call
         );
-        require(success, "Ether tx failed");
     }
 
     /**
