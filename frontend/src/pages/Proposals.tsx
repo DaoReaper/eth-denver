@@ -9,7 +9,7 @@ export const Proposals = () => {
     <SingleColumnLayout>
       <ProposalList header="Proposals" allowLinks={true} />
       <ReaperFormBuilder />
-      <Claim />
+      {/* <Claim /> */}
     </SingleColumnLayout>
   );
 };
