@@ -47,7 +47,7 @@ contract ReaperFactory is IInitData {
         // ReaperConsumer(chainlinkConsumer).init(clone);
 
         // fund the factory with LINK to pay for Chainlink subscriptions
-        require(_fundLinkDeposit(address(this)), "Missing LINK deposit!");
+        // require(_fundLinkDeposit(address(this)), "Missing LINK deposit!");
 
         emit newReaper(clone);
 
