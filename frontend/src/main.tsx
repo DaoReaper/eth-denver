@@ -8,6 +8,7 @@ import { Buffer } from "buffer";
 
 import { Routes } from "./Routes";
 import { TARGET_DAO } from "./targetDao";
+import { App } from "./App";
 
 // This solves an issue when using WalletConnect and intercept Txs to create dao proposals
 // Related open issue: https://github.com/WalletConnect/walletconnect-monorepo/issues/748
@@ -19,13 +20,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
       <QueryClientProvider client={queryClient}>
-        <DHConnectProvider
-          daoChainId={TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID}
-        >
-          <HausThemeProvider>
-            <Routes />
-          </HausThemeProvider>
-        </DHConnectProvider>
+        <HausThemeProvider>
+          <App />
+        </HausThemeProvider>
       </QueryClientProvider>
     </HashRouter>
   </React.StrictMode>

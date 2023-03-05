@@ -1,13 +1,16 @@
-import { DHLayout } from "@daohaus/connect";
 import { Outlet, useLocation } from "react-router-dom";
+import styled from "styled-components";
+import { MainLayout } from "@daohaus/ui";
+
+const StyledContainer = styled.section`
+  width: 100%;
+  margin: 0 auto;
+`;
 
 export const HomeContainer = () => {
-  const location = useLocation();
-  // const { address, profile } = useDHConnect();
-
   return (
-    <div>
+    <StyledContainer>
       <Outlet />
-    </div>
+    </StyledContainer>
   );
 };

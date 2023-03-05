@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { H2, Link, ParMd, SingleColumnLayout } from "@daohaus/ui";
-import { StyledRouterLink } from "../components/Layout";
+import { RouterLink } from "../components/RouterLink";
 import Hero from "../components/Hero";
 
 const LinkBox = styled.div`
@@ -14,15 +14,16 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <h1>here is where you will click to summon a reaper</h1>
-      <SingleColumnLayout>
-        <H2>DAOhaus is your haus</H2>
-        <LinkBox>
-          <Link href="https://github.com/HausDAO/monorepo">Github</Link>
-          <Link href="https://admin.daohaus.fun/">Admin</Link>
-          <StyledRouterLink to="/formtest">Example Form</StyledRouterLink>
-        </LinkBox>
-      </SingleColumnLayout>
+      <div className="">
+        <SingleColumnLayout>
+          <H2>DAOhaus is your haus</H2>
+          <LinkBox>
+            <Link href="https://github.com/HausDAO/monorepo">Github</Link>
+            <Link href="https://admin.daohaus.fun/">Admin</Link>
+            <RouterLink to="/formtest">Example Form</RouterLink>
+          </LinkBox>
+        </SingleColumnLayout>
+      </div>
     </>
   );
 };

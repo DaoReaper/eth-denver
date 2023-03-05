@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { ReactComponent as ReaperLogo } from "../assets/reaper.svg";
+import { RouterLink } from "./RouterLink";
+import { Button } from "@daohaus/ui";
 
 const HeroContainer = styled.div`
   background: url("https://farm9.staticflickr.com/8760/17195790401_ceeeafcddb_o.jpg");
@@ -76,7 +78,11 @@ const Hero = () => {
           DAO REAPER
         </text>
       </svg>
-      {/* <ReaperLogo height={350} /> */}
+      <RouterLink to="/summon">
+        <Button color="secondary" variant="outline">
+          Summon
+        </Button>
+      </RouterLink>
     </HeroContainer>
   );
 };

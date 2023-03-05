@@ -1,10 +1,19 @@
-import { useDHConnect } from '@daohaus/connect';
-import { Link } from 'react-router-dom';
-import { H4, Input, ParSm, SingleColumnLayout, useDebounce } from '@daohaus/ui';
-import React from 'react';
-import { useDaosByUser } from '@daohaus/moloch-v3-hooks';
-import { Dao_Filter } from '@daohaus/moloch-v3-data';
-import { JSONDisplay } from '../components/JSONDisplay';
+import { useDHConnect } from "@daohaus/connect";
+import { Link } from "react-router-dom";
+import { H4, Input, ParSm, SingleColumnLayout, useDebounce } from "@daohaus/ui";
+import React from "react";
+import { useDaosByUser } from "@daohaus/moloch-v3-hooks";
+import { Dao_Filter } from "@daohaus/moloch-v3-data";
+import { JSONDisplay } from "./JSONDisplay";
+import styled from "styled-components";
+
+const CenterLayout = styled("div")`
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  margin: auto;
+  /* align-items: center; */
+`;
 
 export const DaoList = () => {
   const { address } = useDHConnect();
@@ -28,12 +37,12 @@ export const DaoList = () => {
   };
 
   return (
-    <SingleColumnLayout>
-      <div style={{ width: '70rem' }}>
-        <H4>DAOs</H4>
+    <CenterLayout>
+      <div className="">
+        <H4>Your DAOs</H4>
         <Input id="test" onChange={handleSearch} placeholder="dummy-search" />
         {daos?.length ? (
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             {daos.map((dao) => (
               <Link key={dao.dao} to={`/molochv3/${dao.networkId}/${dao.dao}`}>
                 <ParSm>{dao.name}</ParSm>
@@ -46,6 +55,6 @@ export const DaoList = () => {
         <H4>Data</H4>
         {daos && <JSONDisplay data={daos} />}
       </div>
-    </SingleColumnLayout>
+    </CenterLayout>
   );
 };
