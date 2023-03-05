@@ -10,13 +10,16 @@ import {ReaperConsumer} from "./ReaperConsumer.sol";
 contract ReaperFactory is IInitData {
     address public reaperSingleton;
 
-    address public reaperConsumer = 0xeA6721aC65BCeD841B8ec3fc5fEdeA6141a0aDE4; // Mumbai
+    address public reaperConsumerMumbai =
+        0xa1F4E605585D8e7a3160938Cbe873D03525a95d8; // Mumbai
+    address public reaperConsumerGoerli =
+        0x9106E3FeB7a83C090D324460f487b09F773C1C99; // Goerli
 
-    ERC20 public linkToken = ERC20(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+    ERC20 public linkToken = ERC20(0x326C977E6efc84E512bB9C30f76E30c160eD06FB); // LINK
 
-    ERC20 public testToken = ERC20(0xA49dF10dD5B84257dE634F4350218f615471Fc69);
+    ERC20 public testToken = ERC20(0xA49dF10dD5B84257dE634F4350218f615471Fc69); // FTR
 
-    uint256 private linkDeposit = 10 * 1e18; // 10 LINK
+    uint256 private linkDeposit = 1 * 1e18; // 1 LINK
 
     event newReaper(address reaper);
 
@@ -28,16 +31,15 @@ contract ReaperFactory is IInitData {
         external
         returns (address)
     {
+        // deploy Reaper clone
         address clone = Clones.clone(reaperSingleton);
 
-        // address chainlinkConsumer = address(new ReaperConsumer(reaperConsumer));
+        Reaper(clone).initialize(initData, reaperConsumerGoerli);
 
-        address chainlinkConsumer = address(11);
-
-        Reaper(clone).initialize(initData, chainlinkConsumer);
-
+        // link cloned Reaper to ChainlinkConsumer contract, this is commented out bc testing on Goerli, Chainlink is only on Mumbai
         // ReaperConsumer(chainlinkConsumer).init(clone);
 
+        // fund the factory with LINK to pay for Chainlink subscriptions
         require(_fundLinkDeposit(address(this)), "Missing LINK deposit!");
 
         emit newReaper(clone);

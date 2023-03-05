@@ -67,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/IInitData.sol",
-    "id": 1136,
+    "id": 1947,
     "exportedSymbols": {
       "IInitData": [
-        1135
+        1946
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:476:4",
+    "src": "32:476:9",
     "nodes": [
       {
-        "id": 1125,
+        "id": 1936,
         "nodeType": "PragmaDirective",
-        "src": "32:23:4",
+        "src": "32:23:9",
         "nodes": [],
         "literals": [
           "solidity",
@@ -89,26 +89,26 @@
         ]
       },
       {
-        "id": 1135,
+        "id": 1946,
         "nodeType": "ContractDefinition",
-        "src": "57:450:4",
+        "src": "57:450:9",
         "nodes": [
           {
-            "id": 1134,
+            "id": 1945,
             "nodeType": "StructDefinition",
-            "src": "369:136:4",
+            "src": "369:136:9",
             "nodes": [],
             "canonicalName": "IInitData.InitData",
             "members": [
               {
                 "constant": false,
-                "id": 1127,
+                "id": 1938,
                 "mutability": "mutable",
                 "name": "baalDao",
-                "nameLocation": "403:7:4",
+                "nameLocation": "403:7:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1134,
-                "src": "395:15:4",
+                "scope": 1945,
+                "src": "395:15:9",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -116,10 +116,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1126,
+                  "id": 1937,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "395:7:4",
+                  "src": "395:7:9",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -130,13 +130,13 @@
               },
               {
                 "constant": false,
-                "id": 1129,
+                "id": 1940,
                 "mutability": "mutable",
                 "name": "liquidationTarget",
-                "nameLocation": "428:17:4",
+                "nameLocation": "428:17:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1134,
-                "src": "420:25:4",
+                "scope": 1945,
+                "src": "420:25:9",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -144,10 +144,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1128,
+                  "id": 1939,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "420:7:4",
+                  "src": "420:7:9",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -158,13 +158,13 @@
               },
               {
                 "constant": false,
-                "id": 1131,
+                "id": 1942,
                 "mutability": "mutable",
                 "name": "interval",
-                "nameLocation": "463:8:4",
+                "nameLocation": "463:8:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1134,
-                "src": "455:16:4",
+                "scope": 1945,
+                "src": "455:16:9",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -172,10 +172,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1130,
+                  "id": 1941,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "455:7:4",
+                  "src": "455:7:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -185,13 +185,13 @@
               },
               {
                 "constant": false,
-                "id": 1133,
+                "id": 1944,
                 "mutability": "mutable",
                 "name": "threshold",
-                "nameLocation": "489:9:4",
+                "nameLocation": "489:9:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1134,
-                "src": "481:17:4",
+                "scope": 1945,
+                "src": "481:17:9",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -199,10 +199,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1132,
+                  "id": 1943,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "481:7:4",
+                  "src": "481:7:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -212,8 +212,8 @@
               }
             ],
             "name": "InitData",
-            "nameLocation": "376:8:4",
-            "scope": 1135,
+            "nameLocation": "376:8:9",
+            "scope": 1946,
             "visibility": "public"
           }
         ],
@@ -224,15 +224,15 @@
         "contractKind": "interface",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          1135
+          1946
         ],
         "name": "IInitData",
-        "nameLocation": "67:9:4",
-        "scope": 1136,
+        "nameLocation": "67:9:9",
+        "scope": 1947,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 4
+  "id": 9
 }
