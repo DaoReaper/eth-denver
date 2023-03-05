@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useDHConnect, ConnectButton } from "@daohaus/connect";
-import { ReactComponent as ReaperLogo } from "../assets/reaper.svg";
+// import { ReactComponent as ReaperLogo } from "../assets/reaper.svg";
 import { RouterLink } from "./RouterLink";
 
 const StyledNav = styled.nav`
@@ -18,7 +18,7 @@ const Nav = () => {
   return (
     <StyledNav>
       <RouterLink to="/">
-        <ReaperLogo stroke={"white"} height={75} width={75} />
+        {/* <ReaperLogo stroke={"white"} height={75} width={75} /> */}
       </RouterLink>
       <ConnectButton isSm={false} />
     </StyledNav>
