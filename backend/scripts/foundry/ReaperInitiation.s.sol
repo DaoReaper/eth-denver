@@ -2,6 +2,7 @@
 pragma solidity ^0.8.9;
 
 import {ScriptHelper} from "./utils/ScriptHelper.s.sol";
+import {ReaperFactory} from "../../contracts/ReaperFactory.sol";
 import {Reaper} from "../../contracts/Reaper.sol";
 
 // BROADCAST
@@ -15,6 +16,7 @@ contract ReaperInitiationScript is ScriptHelper {
         vm.startBroadcast();
 
         setUpFactory();
+        // factory = ReaperFactory(0x7b17360FA0F295011649FC32ACd292BB98A76f0C);
 
         configureInitData(
             address(baal),
@@ -23,11 +25,12 @@ contract ReaperInitiationScript is ScriptHelper {
             threshold
         );
 
-        testToken.approve(address(factory), linkDeposit);
+        // testing with arbitray ERC20. use LINK in production
+        futuroToken.approve(address(factory), deposit);
 
         reaper = Reaper(factory.deployReaper(initData));
 
-        fundSafe();
+        reaper.addSafeHoldings(erc20s);
 
         vm.stopBroadcast();
     }

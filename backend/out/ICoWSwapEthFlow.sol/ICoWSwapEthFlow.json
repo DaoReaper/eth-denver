@@ -211,23 +211,23 @@
   },
   "ast": {
     "absolutePath": "contracts/legacy/ICoWSwapEthFlow.sol",
-    "id": 10278,
+    "id": 10283,
     "exportedSymbols": {
       "EthFlowOrder": [
-        10268
+        10273
       ],
       "ICoWSwapEthFlow": [
-        10277
+        10282
       ],
       "IERC20": [
-        38245
+        37461
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:2630:27",
     "nodes": [
       {
-        "id": 10236,
+        "id": 10241,
         "nodeType": "PragmaDirective",
         "src": "32:23:27",
         "nodes": [],
@@ -239,23 +239,23 @@
         ]
       },
       {
-        "id": 10238,
+        "id": 10243,
         "nodeType": "ImportDirective",
         "src": "57:70:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10278,
-        "sourceUnit": 38246,
+        "scope": 10283,
+        "sourceUnit": 37462,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 10237,
+              "id": 10242,
               "name": "IERC20",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 38245,
+              "referencedDeclaration": 37461,
               "src": "65:6:27",
               "typeDescriptions": {}
             },
@@ -265,12 +265,12 @@
         "unitAlias": ""
       },
       {
-        "id": 10268,
+        "id": 10273,
         "nodeType": "ContractDefinition",
         "src": "129:1867:27",
         "nodes": [
           {
-            "id": 10267,
+            "id": 10272,
             "nodeType": "StructDefinition",
             "src": "156:1838:27",
             "nodes": [],
@@ -278,36 +278,36 @@
             "members": [
               {
                 "constant": false,
-                "id": 10242,
+                "id": 10247,
                 "mutability": "mutable",
                 "name": "buyToken",
                 "nameLocation": "512:8:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "505:15:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_IERC20_$38245",
+                  "typeIdentifier": "t_contract$_IERC20_$37461",
                   "typeString": "contract IERC20"
                 },
                 "typeName": {
-                  "id": 10241,
+                  "id": 10246,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 10240,
+                    "id": 10245,
                     "name": "IERC20",
                     "nameLocations": [
                       "505:6:27"
                     ],
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 38245,
+                    "referencedDeclaration": 37461,
                     "src": "505:6:27"
                   },
-                  "referencedDeclaration": 38245,
+                  "referencedDeclaration": 37461,
                   "src": "505:6:27",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$38245",
+                    "typeIdentifier": "t_contract$_IERC20_$37461",
                     "typeString": "contract IERC20"
                   }
                 },
@@ -315,12 +315,12 @@
               },
               {
                 "constant": false,
-                "id": 10245,
+                "id": 10250,
                 "mutability": "mutable",
                 "name": "receiver",
                 "nameLocation": "746:8:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "738:16:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -329,7 +329,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 10244,
+                  "id": 10249,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "738:7:27",
@@ -343,12 +343,12 @@
               },
               {
                 "constant": false,
-                "id": 10248,
+                "id": 10253,
                 "mutability": "mutable",
                 "name": "sellAmount",
                 "nameLocation": "848:10:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "840:18:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -357,7 +357,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 10247,
+                  "id": 10252,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "840:7:27",
@@ -370,12 +370,12 @@
               },
               {
                 "constant": false,
-                "id": 10251,
+                "id": 10256,
                 "mutability": "mutable",
                 "name": "buyAmount",
                 "nameLocation": "970:9:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "962:17:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -384,7 +384,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 10250,
+                  "id": 10255,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "962:7:27",
@@ -397,12 +397,12 @@
               },
               {
                 "constant": false,
-                "id": 10254,
+                "id": 10259,
                 "mutability": "mutable",
                 "name": "appData",
                 "nameLocation": "1186:7:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "1178:15:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -411,7 +411,7 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 10253,
+                  "id": 10258,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
                   "src": "1178:7:27",
@@ -424,12 +424,12 @@
               },
               {
                 "constant": false,
-                "id": 10257,
+                "id": 10262,
                 "mutability": "mutable",
                 "name": "feeAmount",
                 "nameLocation": "1349:9:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "1341:17:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -438,7 +438,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 10256,
+                  "id": 10261,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1341:7:27",
@@ -451,12 +451,12 @@
               },
               {
                 "constant": false,
-                "id": 10260,
+                "id": 10265,
                 "mutability": "mutable",
                 "name": "validTo",
                 "nameLocation": "1503:7:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "1496:14:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -465,7 +465,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 10259,
+                  "id": 10264,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "1496:6:27",
@@ -478,12 +478,12 @@
               },
               {
                 "constant": false,
-                "id": 10263,
+                "id": 10268,
                 "mutability": "mutable",
                 "name": "partiallyFillable",
                 "nameLocation": "1620:17:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "1615:22:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -492,7 +492,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 10262,
+                  "id": 10267,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "1615:4:27",
@@ -505,12 +505,12 @@
               },
               {
                 "constant": false,
-                "id": 10266,
+                "id": 10271,
                 "mutability": "mutable",
                 "name": "quoteId",
                 "nameLocation": "1980:7:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 10267,
+                "scope": 10272,
                 "src": "1974:13:27",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -519,7 +519,7 @@
                   "typeString": "int64"
                 },
                 "typeName": {
-                  "id": 10265,
+                  "id": 10270,
                   "name": "int64",
                   "nodeType": "ElementaryTypeName",
                   "src": "1974:5:27",
@@ -533,7 +533,7 @@
             ],
             "name": "Data",
             "nameLocation": "163:4:27",
-            "scope": 10268,
+            "scope": 10273,
             "visibility": "public"
           }
         ],
@@ -544,20 +544,20 @@
         "contractKind": "library",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          10268
+          10273
         ],
         "name": "EthFlowOrder",
         "nameLocation": "137:12:27",
-        "scope": 10278,
+        "scope": 10283,
         "usedErrors": []
       },
       {
-        "id": 10277,
+        "id": 10282,
         "nodeType": "ContractDefinition",
         "src": "1998:158:27",
         "nodes": [
           {
-            "id": 10276,
+            "id": 10281,
             "nodeType": "FunctionDefinition",
             "src": "2030:124:27",
             "nodes": [],
@@ -568,42 +568,42 @@
             "name": "createOrder",
             "nameLocation": "2039:11:27",
             "parameters": {
-              "id": 10272,
+              "id": 10277,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10271,
+                  "id": 10276,
                   "mutability": "mutable",
                   "name": "order",
                   "nameLocation": "2078:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10276,
+                  "scope": 10281,
                   "src": "2051:32:27",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Data_$10267_calldata_ptr",
+                    "typeIdentifier": "t_struct$_Data_$10272_calldata_ptr",
                     "typeString": "struct EthFlowOrder.Data"
                   },
                   "typeName": {
-                    "id": 10270,
+                    "id": 10275,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10269,
+                      "id": 10274,
                       "name": "EthFlowOrder.Data",
                       "nameLocations": [
                         "2051:12:27",
                         "2064:4:27"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 10267,
+                      "referencedDeclaration": 10272,
                       "src": "2051:17:27"
                     },
-                    "referencedDeclaration": 10267,
+                    "referencedDeclaration": 10272,
                     "src": "2051:17:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Data_$10267_storage_ptr",
+                      "typeIdentifier": "t_struct$_Data_$10272_storage_ptr",
                       "typeString": "struct EthFlowOrder.Data"
                     }
                   },
@@ -613,17 +613,17 @@
               "src": "2050:34:27"
             },
             "returnParameters": {
-              "id": 10275,
+              "id": 10280,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10274,
+                  "id": 10279,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "2143:9:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10276,
+                  "scope": 10281,
                   "src": "2135:17:27",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -632,7 +632,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 10273,
+                    "id": 10278,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2135:7:27",
@@ -646,7 +646,7 @@
               ],
               "src": "2134:19:27"
             },
-            "scope": 10277,
+            "scope": 10282,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
@@ -659,11 +659,11 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          10277
+          10282
         ],
         "name": "ICoWSwapEthFlow",
         "nameLocation": "2008:15:27",
-        "scope": 10278,
+        "scope": 10283,
         "usedErrors": []
       }
     ],

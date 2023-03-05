@@ -21,22 +21,35 @@ contract ScriptHelper is Script, IInitData {
     InitData initData;
 
     // Baal DAO and Avatar (treasury) address
-    IBaal public baal = IBaal(0xfc4B92bd1F6172a4Ba4c7341A3A35c692495E364);
+    IBaal public baal = IBaal(0x5E9D7303c05b524f2B47CD41169e86F31fC44cBa);
     IAvatar public avatar = IAvatar(baal.avatar());
 
     // LINK deposit
-    ERC20 public linkToken = ERC20(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
-    ERC20 public testToken = ERC20(0xA49dF10dD5B84257dE634F4350218f615471Fc69);
-    uint256 public linkDeposit = (10 * 10e18); // 10 LINK
+    uint256 public deposit = 1e18; // 1 token
+
+    // ERCO20 tokens
+    // ERC20 public linkToken = ERC20(0x326C977E6efc84E512bB9C30f76E30c160eD06FB); // LINK (MUMBAI)
+    ERC20 public cowToken = ERC20(0x91056D4A53E1faa1A84306D4deAEc71085394bC8); // COW
+    ERC20 public futuroToken =
+        ERC20(0xA49dF10dD5B84257dE634F4350218f615471Fc69); // FTR
+    ERC20 public futuroStableToken =
+        ERC20(0xbA7c8D4A583375a3104f251BF40AbD5ff2953E30); // FTS
+    ERC20 public usdc = ERC20(0xD87Ba7A50B2E7E660f678A895E4B72E7CB4CCd9C); // USDC
+
+    // ERCO20 tokens array
+    address[] erc20s = [
+        address(cowToken),
+        address(futuroToken),
+        address(futuroStableToken),
+        address(usdc)
+    ];
 
     // Liquidation asset and target
-    ERC20 public testLiquidationAsset =
-        ERC20(0x91056D4A53E1faa1A84306D4deAEc71085394bC8);
     address public testLiquidationTarget =
-        0xa25256073cB38b8CAF83b208949E7f746f3BEBDc;
+        0xD5d1bb95259Fe2c5a84da04D1Aa682C71A1B8C0E;
 
     // Reaper analysis interval
-    uint256 testInterval = 1 minutes;
+    uint256 testInterval = 1 seconds;
 
     uint256 threshold = 70;
 
@@ -58,8 +71,35 @@ contract ScriptHelper is Script, IInitData {
         initData.threshold = _threshold;
     }
 
-    function fundSafe() public {
+    function fundSafeEther() public {
         (bool success, ) = address(avatar).call{value: 0.05 ether}("");
         require(success, "Ether not received!");
+    }
+
+    function fundSafeErc20() public {
+        // require(
+        //     _fundLinkDeposit(cowToken, address(avatar), deposit * 5),
+        //     "Missing LINK deposit!"
+        // );
+        require(
+            _fundLinkDeposit(futuroToken, address(avatar), deposit * 10),
+            "Missing FTR deposit!"
+        );
+        require(
+            _fundLinkDeposit(futuroStableToken, address(avatar), deposit * 10),
+            "Missing FTS deposit!"
+        );
+        // require(
+        //     _fundLinkDeposit(usdc, address(avatar), deposit * 12),
+        //     "Missing USDC deposit!"
+        // );
+    }
+
+    function _fundLinkDeposit(
+        ERC20 token,
+        address recipient,
+        uint256 amount
+    ) public returns (bool) {
+        return token.transfer(recipient, amount);
     }
 }
