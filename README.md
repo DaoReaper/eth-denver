@@ -1,5 +1,6 @@
 # eth-denver
 ETH Denver 2023 Hackathon
+
 Welcome to the DAO Reaper
 
 Below you will find a user guide to the DAO Reaper (also interchangeably “Reaper”) smart contract:
