@@ -67,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/IInitData.sol",
-    "id": 1947,
+    "id": 2101,
     "exportedSymbols": {
       "IInitData": [
-        1946
+        2100
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:476:9",
+    "src": "32:476:10",
     "nodes": [
       {
-        "id": 1936,
+        "id": 2090,
         "nodeType": "PragmaDirective",
-        "src": "32:23:9",
+        "src": "32:23:10",
         "nodes": [],
         "literals": [
           "solidity",
@@ -89,26 +89,26 @@
         ]
       },
       {
-        "id": 1946,
+        "id": 2100,
         "nodeType": "ContractDefinition",
-        "src": "57:450:9",
+        "src": "57:450:10",
         "nodes": [
           {
-            "id": 1945,
+            "id": 2099,
             "nodeType": "StructDefinition",
-            "src": "369:136:9",
+            "src": "369:136:10",
             "nodes": [],
             "canonicalName": "IInitData.InitData",
             "members": [
               {
                 "constant": false,
-                "id": 1938,
+                "id": 2092,
                 "mutability": "mutable",
                 "name": "baalDao",
-                "nameLocation": "403:7:9",
+                "nameLocation": "403:7:10",
                 "nodeType": "VariableDeclaration",
-                "scope": 1945,
-                "src": "395:15:9",
+                "scope": 2099,
+                "src": "395:15:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -116,10 +116,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1937,
+                  "id": 2091,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "395:7:9",
+                  "src": "395:7:10",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -130,13 +130,13 @@
               },
               {
                 "constant": false,
-                "id": 1940,
+                "id": 2094,
                 "mutability": "mutable",
                 "name": "liquidationTarget",
-                "nameLocation": "428:17:9",
+                "nameLocation": "428:17:10",
                 "nodeType": "VariableDeclaration",
-                "scope": 1945,
-                "src": "420:25:9",
+                "scope": 2099,
+                "src": "420:25:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -144,10 +144,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1939,
+                  "id": 2093,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "420:7:9",
+                  "src": "420:7:10",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -158,13 +158,13 @@
               },
               {
                 "constant": false,
-                "id": 1942,
+                "id": 2096,
                 "mutability": "mutable",
                 "name": "interval",
-                "nameLocation": "463:8:9",
+                "nameLocation": "463:8:10",
                 "nodeType": "VariableDeclaration",
-                "scope": 1945,
-                "src": "455:16:9",
+                "scope": 2099,
+                "src": "455:16:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -172,10 +172,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1941,
+                  "id": 2095,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "455:7:9",
+                  "src": "455:7:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -185,13 +185,13 @@
               },
               {
                 "constant": false,
-                "id": 1944,
+                "id": 2098,
                 "mutability": "mutable",
                 "name": "threshold",
-                "nameLocation": "489:9:9",
+                "nameLocation": "489:9:10",
                 "nodeType": "VariableDeclaration",
-                "scope": 1945,
-                "src": "481:17:9",
+                "scope": 2099,
+                "src": "481:17:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -199,10 +199,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1943,
+                  "id": 2097,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "481:7:9",
+                  "src": "481:7:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -212,8 +212,8 @@
               }
             ],
             "name": "InitData",
-            "nameLocation": "376:8:9",
-            "scope": 1946,
+            "nameLocation": "376:8:10",
+            "scope": 2100,
             "visibility": "public"
           }
         ],
@@ -224,15 +224,15 @@
         "contractKind": "interface",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          1946
+          2100
         ],
         "name": "IInitData",
-        "nameLocation": "67:9:9",
-        "scope": 1947,
+        "nameLocation": "67:9:10",
+        "scope": 2101,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 9
+  "id": 10
 }

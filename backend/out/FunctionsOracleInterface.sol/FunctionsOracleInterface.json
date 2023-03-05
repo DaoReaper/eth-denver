@@ -600,20 +600,20 @@
   },
   "ast": {
     "absolutePath": "contracts/chainlink/dev/interfaces/FunctionsOracleInterface.sol",
-    "id": 1878,
+    "id": 1989,
     "exportedSymbols": {
       "FunctionsBillingRegistryInterface": [
-        1767
+        1878
       ],
       "FunctionsOracleInterface": [
-        1877
+        1988
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:3785:7",
     "nodes": [
       {
-        "id": 1789,
+        "id": 1900,
         "nodeType": "PragmaDirective",
         "src": "32:23:7",
         "nodes": [],
@@ -625,30 +625,30 @@
         ]
       },
       {
-        "id": 1790,
+        "id": 1901,
         "nodeType": "ImportDirective",
         "src": "57:49:7",
         "nodes": [],
         "absolutePath": "contracts/chainlink/dev/interfaces/FunctionsBillingRegistryInterface.sol",
         "file": "./FunctionsBillingRegistryInterface.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 1878,
-        "sourceUnit": 1768,
+        "scope": 1989,
+        "sourceUnit": 1879,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 1877,
+        "id": 1988,
         "nodeType": "ContractDefinition",
         "src": "164:3652:7",
         "nodes": [
           {
-            "id": 1797,
+            "id": 1908,
             "nodeType": "FunctionDefinition",
             "src": "359:55:7",
             "nodes": [],
             "documentation": {
-              "id": 1792,
+              "id": 1903,
               "nodeType": "StructuredDocumentation",
               "src": "203:153:7",
               "text": " @notice Gets the stored billing registry address\n @return registryAddress The address of Chainlink Functions billing registry contract"
@@ -660,23 +660,23 @@
             "name": "getRegistry",
             "nameLocation": "368:11:7",
             "parameters": {
-              "id": 1793,
+              "id": 1904,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "379:2:7"
             },
             "returnParameters": {
-              "id": 1796,
+              "id": 1907,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1795,
+                  "id": 1906,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 1908,
                   "src": "405:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -685,7 +685,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1794,
+                    "id": 1905,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "405:7:7",
@@ -700,18 +700,18 @@
               ],
               "src": "404:9:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1803,
+            "id": 1914,
             "nodeType": "FunctionDefinition",
             "src": "577:55:7",
             "nodes": [],
             "documentation": {
-              "id": 1798,
+              "id": 1909,
               "nodeType": "StructuredDocumentation",
               "src": "418:156:7",
               "text": " @notice Sets the stored billing registry address\n @param registryAddress The new address of Chainlink Functions billing registry contract"
@@ -723,17 +723,17 @@
             "name": "setRegistry",
             "nameLocation": "586:11:7",
             "parameters": {
-              "id": 1801,
+              "id": 1912,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1800,
+                  "id": 1911,
                   "mutability": "mutable",
                   "name": "registryAddress",
                   "nameLocation": "606:15:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1803,
+                  "scope": 1914,
                   "src": "598:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -742,7 +742,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1799,
+                    "id": 1910,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "598:7:7",
@@ -758,23 +758,23 @@
               "src": "597:25:7"
             },
             "returnParameters": {
-              "id": 1802,
+              "id": 1913,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "631:0:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1809,
+            "id": 1920,
             "nodeType": "FunctionDefinition",
             "src": "907:64:7",
             "nodes": [],
             "documentation": {
-              "id": 1804,
+              "id": 1915,
               "nodeType": "StructuredDocumentation",
               "src": "636:268:7",
               "text": " @notice Returns the DON's secp256k1 public key that is used to encrypt secrets\n @dev All nodes on the DON have the corresponding private key\n needed to decrypt the secrets encrypted with the public key\n @return publicKey the DON's public key"
@@ -786,23 +786,23 @@
             "name": "getDONPublicKey",
             "nameLocation": "916:15:7",
             "parameters": {
-              "id": 1805,
+              "id": 1916,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "931:2:7"
             },
             "returnParameters": {
-              "id": 1808,
+              "id": 1919,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1807,
+                  "id": 1918,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1809,
+                  "scope": 1920,
                   "src": "957:12:7",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -811,7 +811,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1806,
+                    "id": 1917,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "957:5:7",
@@ -825,18 +825,18 @@
               ],
               "src": "956:14:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1815,
+            "id": 1926,
             "nodeType": "FunctionDefinition",
             "src": "1133:63:7",
             "nodes": [],
             "documentation": {
-              "id": 1810,
+              "id": 1921,
               "nodeType": "StructuredDocumentation",
               "src": "975:155:7",
               "text": " @notice Sets DON's secp256k1 public key used to encrypt secrets\n @dev Used to rotate the key\n @param donPublicKey The new public key"
@@ -848,17 +848,17 @@
             "name": "setDONPublicKey",
             "nameLocation": "1142:15:7",
             "parameters": {
-              "id": 1813,
+              "id": 1924,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1812,
+                  "id": 1923,
                   "mutability": "mutable",
                   "name": "donPublicKey",
                   "nameLocation": "1173:12:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1815,
+                  "scope": 1926,
                   "src": "1158:27:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -867,7 +867,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1811,
+                    "id": 1922,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1158:5:7",
@@ -882,23 +882,23 @@
               "src": "1157:29:7"
             },
             "returnParameters": {
-              "id": 1814,
+              "id": 1925,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1195:0:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1823,
+            "id": 1934,
             "nodeType": "FunctionDefinition",
             "src": "1430:75:7",
             "nodes": [],
             "documentation": {
-              "id": 1816,
+              "id": 1927,
               "nodeType": "StructuredDocumentation",
               "src": "1200:227:7",
               "text": " @notice Sets a per-node secp256k1 public key used to encrypt secrets for that node\n @dev Callable only by contract owner and DON members\n @param node node's address\n @param publicKey node's public key"
@@ -910,17 +910,17 @@
             "name": "setNodePublicKey",
             "nameLocation": "1439:16:7",
             "parameters": {
-              "id": 1821,
+              "id": 1932,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1818,
+                  "id": 1929,
                   "mutability": "mutable",
                   "name": "node",
                   "nameLocation": "1464:4:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1823,
+                  "scope": 1934,
                   "src": "1456:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -929,7 +929,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1817,
+                    "id": 1928,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1456:7:7",
@@ -943,12 +943,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1820,
+                  "id": 1931,
                   "mutability": "mutable",
                   "name": "publicKey",
                   "nameLocation": "1485:9:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1823,
+                  "scope": 1934,
                   "src": "1470:24:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -957,7 +957,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1819,
+                    "id": 1930,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1470:5:7",
@@ -972,23 +972,23 @@
               "src": "1455:40:7"
             },
             "returnParameters": {
-              "id": 1822,
+              "id": 1933,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1504:0:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1829,
+            "id": 1940,
             "nodeType": "FunctionDefinition",
             "src": "1653:52:7",
             "nodes": [],
             "documentation": {
-              "id": 1824,
+              "id": 1935,
               "nodeType": "StructuredDocumentation",
               "src": "1509:141:7",
               "text": " @notice Deletes node's public key\n @dev Callable only by contract owner or the node itself\n @param node node's address"
@@ -1000,17 +1000,17 @@
             "name": "deleteNodePublicKey",
             "nameLocation": "1662:19:7",
             "parameters": {
-              "id": 1827,
+              "id": 1938,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1826,
+                  "id": 1937,
                   "mutability": "mutable",
                   "name": "node",
                   "nameLocation": "1690:4:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1829,
+                  "scope": 1940,
                   "src": "1682:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1019,7 +1019,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1825,
+                    "id": 1936,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1682:7:7",
@@ -1035,23 +1035,23 @@
               "src": "1681:14:7"
             },
             "returnParameters": {
-              "id": 1828,
+              "id": 1939,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1704:0:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1839,
+            "id": 1950,
             "nodeType": "FunctionDefinition",
             "src": "1895:89:7",
             "nodes": [],
             "documentation": {
-              "id": 1830,
+              "id": 1941,
               "nodeType": "StructuredDocumentation",
               "src": "1709:183:7",
               "text": " @notice Return two arrays of equal size containing DON members' addresses and their corresponding\n public keys (or empty byte arrays if per-node key is not defined)"
@@ -1063,23 +1063,23 @@
             "name": "getAllNodePublicKeys",
             "nameLocation": "1904:20:7",
             "parameters": {
-              "id": 1831,
+              "id": 1942,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1924:2:7"
             },
             "returnParameters": {
-              "id": 1838,
+              "id": 1949,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1834,
+                  "id": 1945,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1839,
+                  "scope": 1950,
                   "src": "1950:16:7",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1089,7 +1089,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1832,
+                      "id": 1943,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "1950:7:7",
@@ -1099,7 +1099,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 1833,
+                    "id": 1944,
                     "nodeType": "ArrayTypeName",
                     "src": "1950:9:7",
                     "typeDescriptions": {
@@ -1111,12 +1111,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1837,
+                  "id": 1948,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1839,
+                  "scope": 1950,
                   "src": "1968:14:7",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1126,7 +1126,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1835,
+                      "id": 1946,
                       "name": "bytes",
                       "nodeType": "ElementaryTypeName",
                       "src": "1968:5:7",
@@ -1135,7 +1135,7 @@
                         "typeString": "bytes"
                       }
                     },
-                    "id": 1836,
+                    "id": 1947,
                     "nodeType": "ArrayTypeName",
                     "src": "1968:7:7",
                     "typeDescriptions": {
@@ -1148,18 +1148,18 @@
               ],
               "src": "1949:34:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1850,
+            "id": 1961,
             "nodeType": "FunctionDefinition",
             "src": "2331:155:7",
             "nodes": [],
             "documentation": {
-              "id": 1840,
+              "id": 1951,
               "nodeType": "StructuredDocumentation",
               "src": "1988:340:7",
               "text": " @notice Determine the fee charged by the DON that will be split between signing Node Operators for servicing the request\n @param data Encoded Chainlink Functions request data, use FunctionsClient API to encode a request\n @param billing The request's billing configuration\n @return fee Cost in Juels (1e18) of LINK"
@@ -1171,17 +1171,17 @@
             "name": "getRequiredFee",
             "nameLocation": "2340:14:7",
             "parameters": {
-              "id": 1846,
+              "id": 1957,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1842,
+                  "id": 1953,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "2370:4:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1850,
+                  "scope": 1961,
                   "src": "2355:19:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1190,7 +1190,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1841,
+                    "id": 1952,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2355:5:7",
@@ -1203,37 +1203,37 @@
                 },
                 {
                   "constant": false,
-                  "id": 1845,
+                  "id": 1956,
                   "mutability": "mutable",
                   "name": "billing",
                   "nameLocation": "2434:7:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1850,
+                  "scope": 1961,
                   "src": "2376:65:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_RequestBilling_$1689_calldata_ptr",
+                    "typeIdentifier": "t_struct$_RequestBilling_$1800_calldata_ptr",
                     "typeString": "struct FunctionsBillingRegistryInterface.RequestBilling"
                   },
                   "typeName": {
-                    "id": 1844,
+                    "id": 1955,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 1843,
+                      "id": 1954,
                       "name": "FunctionsBillingRegistryInterface.RequestBilling",
                       "nameLocations": [
                         "2376:33:7",
                         "2410:14:7"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1689,
+                      "referencedDeclaration": 1800,
                       "src": "2376:48:7"
                     },
-                    "referencedDeclaration": 1689,
+                    "referencedDeclaration": 1800,
                     "src": "2376:48:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RequestBilling_$1689_storage_ptr",
+                      "typeIdentifier": "t_struct$_RequestBilling_$1800_storage_ptr",
                       "typeString": "struct FunctionsBillingRegistryInterface.RequestBilling"
                     }
                   },
@@ -1243,17 +1243,17 @@
               "src": "2354:88:7"
             },
             "returnParameters": {
-              "id": 1849,
+              "id": 1960,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1848,
+                  "id": 1959,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1850,
+                  "scope": 1961,
                   "src": "2478:6:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1262,7 +1262,7 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1847,
+                    "id": 1958,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
                     "src": "2478:6:7",
@@ -1276,18 +1276,18 @@
               ],
               "src": "2477:8:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1864,
+            "id": 1975,
             "nodeType": "FunctionDefinition",
             "src": "3037:152:7",
             "nodes": [],
             "documentation": {
-              "id": 1851,
+              "id": 1962,
               "nodeType": "StructuredDocumentation",
               "src": "2490:544:7",
               "text": " @notice Estimate the total cost that will be charged to a subscription to make a request: gas re-imbursement, plus DON fee, plus Registry fee\n @param subscriptionId A unique subscription ID allocated by billing system,\n a client can make requests from different contracts referencing the same subscription\n @param data Encoded Chainlink Functions request data, use FunctionsClient API to encode a request\n @param gasLimit Gas limit for the fulfillment callback\n @return billedCost Cost in Juels (1e18) of LINK"
@@ -1299,17 +1299,17 @@
             "name": "estimateCost",
             "nameLocation": "3046:12:7",
             "parameters": {
-              "id": 1860,
+              "id": 1971,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1853,
+                  "id": 1964,
                   "mutability": "mutable",
                   "name": "subscriptionId",
                   "nameLocation": "3071:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1864,
+                  "scope": 1975,
                   "src": "3064:21:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1318,7 +1318,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 1852,
+                    "id": 1963,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "3064:6:7",
@@ -1331,12 +1331,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1855,
+                  "id": 1966,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "3106:4:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1864,
+                  "scope": 1975,
                   "src": "3091:19:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1345,7 +1345,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1854,
+                    "id": 1965,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "3091:5:7",
@@ -1358,12 +1358,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1857,
+                  "id": 1968,
                   "mutability": "mutable",
                   "name": "gasLimit",
                   "nameLocation": "3123:8:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1864,
+                  "scope": 1975,
                   "src": "3116:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1372,7 +1372,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1856,
+                    "id": 1967,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3116:6:7",
@@ -1385,12 +1385,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1859,
+                  "id": 1970,
                   "mutability": "mutable",
                   "name": "gasPrice",
                   "nameLocation": "3145:8:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1864,
+                  "scope": 1975,
                   "src": "3137:16:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1399,7 +1399,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1858,
+                    "id": 1969,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3137:7:7",
@@ -1414,17 +1414,17 @@
               "src": "3058:99:7"
             },
             "returnParameters": {
-              "id": 1863,
+              "id": 1974,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1862,
+                  "id": 1973,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1864,
+                  "scope": 1975,
                   "src": "3181:6:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1433,7 +1433,7 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1861,
+                    "id": 1972,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
                     "src": "3181:6:7",
@@ -1447,18 +1447,18 @@
               ],
               "src": "3180:8:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 1876,
+            "id": 1987,
             "nodeType": "FunctionDefinition",
             "src": "3689:125:7",
             "nodes": [],
             "documentation": {
-              "id": 1865,
+              "id": 1976,
               "nodeType": "StructuredDocumentation",
               "src": "3193:493:7",
               "text": " @notice Sends a request (encoded as data) using the provided subscriptionId\n @param subscriptionId A unique subscription ID allocated by billing system,\n a client can make requests from different contracts referencing the same subscription\n @param data Encoded Chainlink Functions request data, use FunctionsClient API to encode a request\n @param gasLimit Gas limit for the fulfillment callback\n @return requestId A unique request identifier (unique per DON)"
@@ -1470,17 +1470,17 @@
             "name": "sendRequest",
             "nameLocation": "3698:11:7",
             "parameters": {
-              "id": 1872,
+              "id": 1983,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1867,
+                  "id": 1978,
                   "mutability": "mutable",
                   "name": "subscriptionId",
                   "nameLocation": "3722:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1876,
+                  "scope": 1987,
                   "src": "3715:21:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1489,7 +1489,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 1866,
+                    "id": 1977,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "3715:6:7",
@@ -1502,12 +1502,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1869,
+                  "id": 1980,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "3757:4:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1876,
+                  "scope": 1987,
                   "src": "3742:19:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1516,7 +1516,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1868,
+                    "id": 1979,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "3742:5:7",
@@ -1529,12 +1529,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1871,
+                  "id": 1982,
                   "mutability": "mutable",
                   "name": "gasLimit",
                   "nameLocation": "3774:8:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1876,
+                  "scope": 1987,
                   "src": "3767:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1543,7 +1543,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1870,
+                    "id": 1981,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3767:6:7",
@@ -1558,17 +1558,17 @@
               "src": "3709:77:7"
             },
             "returnParameters": {
-              "id": 1875,
+              "id": 1986,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1874,
+                  "id": 1985,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1876,
+                  "scope": 1987,
                   "src": "3805:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1577,7 +1577,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1873,
+                    "id": 1984,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3805:7:7",
@@ -1591,7 +1591,7 @@
               ],
               "src": "3804:9:7"
             },
-            "scope": 1877,
+            "scope": 1988,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1603,18 +1603,18 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 1791,
+          "id": 1902,
           "nodeType": "StructuredDocumentation",
           "src": "108:55:7",
           "text": " @title Chainlink Functions oracle interface."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          1877
+          1988
         ],
         "name": "FunctionsOracleInterface",
         "nameLocation": "174:24:7",
-        "scope": 1878,
+        "scope": 1989,
         "usedErrors": []
       }
     ],

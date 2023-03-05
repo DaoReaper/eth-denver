@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 import "../../../lib/forge-std/src/Script.sol";
 import {ERC20} from "../../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {ICoWSwapEthFlow, EthFlowOrder} from "../../../contracts/legacy/ICoWSwapEthFlow.sol";
+import {ICoWSwapEthFlow, EthFlowOrder} from "../../../contracts/cowSwap/ICoWSwapEthFlow.sol";
 
 // BROADCAST
 // forge script scripts/foundry/test/CowEthFlow.s.sol:CowEthFlow --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv

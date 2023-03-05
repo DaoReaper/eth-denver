@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import {FunctionsClient} from "./chainlink/dev/functions/FunctionsClient.sol";
-import {Functions} from "./chainlink/dev/functions/Functions.sol";
+import {FunctionsClient} from "./dev/functions/FunctionsClient.sol";
+import {Functions} from "./dev/functions/Functions.sol";
 import {ConfirmedOwner} from "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
-import {Reaper} from "./Reaper.sol";
+import {Reaper} from "../Reaper.sol";
 
 contract ReaperConsumer is FunctionsClient, ConfirmedOwner {
     using Functions for Functions.Request;

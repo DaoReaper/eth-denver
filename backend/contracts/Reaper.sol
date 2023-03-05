@@ -8,7 +8,7 @@ import {IAvatar} from "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol";
 import "@gnosis.pm/safe-contracts/contracts/common/Enum.sol";
 import {IBaal} from "./interfaces/IBaal.sol";
 import {IInitData} from "./interfaces/IInitData.sol";
-import {ReaperConsumer} from "./ReaperConsumer.sol";
+import {ReaperConsumer} from "./chainlink/ReaperConsumer.sol";
 import {Functions} from "./chainlink/dev/functions/Functions.sol";
 
 contract Reaper is IInitData, Initializable {
