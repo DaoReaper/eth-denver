@@ -21,7 +21,7 @@ contract ScriptHelper is Script, IInitData {
     InitData initData;
 
     // Baal DAO and Avatar (treasury) address
-    IBaal public baal = IBaal(0x5E9D7303c05b524f2B47CD41169e86F31fC44cBa);
+    IBaal public baal = IBaal(0x695Fbfe5271fb2a00dD31019f8Dc9404b08898d1);
     IAvatar public avatar = IAvatar(baal.avatar());
 
     // LINK deposit
