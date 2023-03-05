@@ -27,4 +27,28 @@ export const APP_FIELD: Record<string, CustomFieldLego> = {
     label: "Test Field",
     placeholder: "Enter something",
   },
+  MORALE: {
+    id: "morale",
+    type: "input",
+    label: "Morale",
+    placeholder: "How you feelin, champ?",
+  },
+  FUTURE: {
+    id: "future",
+    type: "input",
+    label: "Future Actions",
+    placeholder: "Tomorrow, I will sever the head of Moloch",
+    info: "What are you going to do next?",
+  },
+  OBSTACLES: {
+    id: "obstacles",
+    type: "input",
+    label: "Obstacles",
+    placeholder: "I am being held hostage by a cult",
+    info: "What is getting in your way?",
+  },
+  CLAIM_BUILDER: {
+    id: "claimBuilder",
+    type: "claimBuilder",
+  },
 };

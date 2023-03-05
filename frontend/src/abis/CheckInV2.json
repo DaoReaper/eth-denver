@@ -1,0 +1,254 @@
+[
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      { "type": "address", "name": "", "internalType": "contract IBAAL" }
+    ],
+    "name": "baal",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "checkInInterval",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "claim",
+    "inputs": [
+      {
+        "type": "uint64[]",
+        "name": "_sessionsTime",
+        "internalType": "uint64[]"
+      },
+      {
+        "type": "uint8[]",
+        "name": "_sessionsValue",
+        "internalType": "uint8[]"
+      },
+      { "type": "string", "name": "_metadata", "internalType": "string" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "init",
+    "inputs": [
+      { "type": "address", "name": "_baal", "internalType": "address" },
+      { "type": "address", "name": "_teamLead", "internalType": "address" },
+      { "type": "bool", "name": "_sharesOrLoot", "internalType": "bool" },
+      {
+        "type": "uint256",
+        "name": "_tokenPerSecond",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_checkInInterval",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint32[5]",
+        "name": "_valueScalePercs",
+        "internalType": "uint32[5]"
+      },
+      { "type": "bool", "name": "_shouldLock", "internalType": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "bool", "name": "", "internalType": "bool" }],
+    "name": "isLocked",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "lock",
+    "inputs": [
+      { "type": "bool", "name": "_shouldLock", "internalType": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "mutiny",
+    "inputs": [
+      { "type": "address", "name": "_newTeamLead", "internalType": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "post",
+    "inputs": [
+      { "type": "string", "name": "content", "internalType": "string" },
+      { "type": "string", "name": "tag", "internalType": "string" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "bool", "name": "", "internalType": "bool" }],
+    "name": "sharesOrLoot",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "address", "name": "", "internalType": "address" }],
+    "name": "teamLead",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "timeLedger",
+    "inputs": [{ "type": "address", "name": "", "internalType": "address" }]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      { "type": "address", "name": "", "internalType": "contract IERC20" }
+    ],
+    "name": "token",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "tokenPerSecond",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateCheckInInterval",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_newCheckInInterval",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateTokenPerSecond",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_newTokenPerSecond",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateValueScalePercs",
+    "inputs": [
+      {
+        "type": "uint32[5]",
+        "name": "_newValueScalePercs",
+        "internalType": "uint32[5]"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint32", "name": "", "internalType": "uint32" }],
+    "name": "valueScalePercs",
+    "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }]
+  },
+  {
+    "type": "event",
+    "name": "Claim",
+    "inputs": [
+      { "type": "address", "name": "account", "indexed": true },
+      { "type": "uint256", "name": "timestamp", "indexed": false },
+      { "type": "uint256", "name": "tokenAmountClaimed", "indexed": false },
+      { "type": "uint64", "name": "totalSecondsWorked", "indexed": false },
+      { "type": "uint64[]", "name": "sessionsTime", "indexed": false },
+      { "type": "uint8[]", "name": "sessionsValue", "indexed": false },
+      { "type": "string", "name": "metadata", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Initialized",
+    "inputs": [{ "type": "uint8", "name": "version", "indexed": false }],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Lock",
+    "inputs": [{ "type": "bool", "name": "isLocked", "indexed": false }],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Mutiny",
+    "inputs": [
+      { "type": "address", "name": "from", "indexed": false },
+      { "type": "address", "name": "to", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Post",
+    "inputs": [
+      { "type": "address", "name": "account", "indexed": true },
+      { "type": "string", "name": "tag", "indexed": true },
+      { "type": "string", "name": "metadata", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdateInterval",
+    "inputs": [
+      { "type": "uint256", "name": "from", "indexed": false },
+      { "type": "uint256", "name": "to", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdatePercs",
+    "inputs": [
+      { "type": "uint32[5]", "name": "from", "indexed": false },
+      { "type": "uint32[5]", "name": "to", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdateTokenPerSecond",
+    "inputs": [
+      { "type": "uint256", "name": "from", "indexed": false },
+      { "type": "uint256", "name": "to", "indexed": false }
+    ],
+    "anonymous": false
+  }
+]
