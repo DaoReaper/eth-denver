@@ -14,7 +14,7 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <div className="">
+      {/* <div className="">
         <SingleColumnLayout>
           <H2>DAOhaus is your haus</H2>
           <LinkBox>
@@ -23,7 +23,7 @@ export const Home = () => {
             <RouterLink to="/formtest">Example Form</RouterLink>
           </LinkBox>
         </SingleColumnLayout>
-      </div>
+      </div> */}
     </>
   );
 };

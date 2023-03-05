@@ -7,14 +7,7 @@ const SummonReaper = () => {
   return (
     <>
       <Nav />
-
       <DaoList />
-
-      <SingleColumnLayout>
-        <Card>
-          <h1>Summon Reaper</h1>
-        </Card>
-      </SingleColumnLayout>
     </>
   );
 };

@@ -41,27 +41,10 @@ export const REAPER_TX: Record<string, TXLego> = {
               threshold: `.formValues.threshold`,
             },
           },
-          { type: "static", value: POSTER_TAGS.signalProposal },
         ],
       },
     ],
   }),
-  // CREATE_REAPER: {
-  //   id: "CREATE_REAPER",
-  //   contract: APP_CONTRACT.REAPER_FACTORY,
-  //   method: "post",
-  //   args: [
-  //     {
-  //       type: "JSONDetails",
-  //       jsonSchema: {
-  //         baalDao: `.formValues.baalDao`,
-  //         liquidationTarget: `.formValues.liquidationTarget`,
-  //         interval: `.formValues.interval`,
-  //         threshold: `.formValues.threshold`,
-  //       },
-  //     },
-  //   ],
-  // },
 };
 
 export const APP_TX = {
