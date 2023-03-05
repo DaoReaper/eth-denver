@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.7;
 
-import "../node_modules/@openzeppelin/contracts/proxy/Clones.sol";
-import {ERC20} from "../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/proxy/Clones.sol";
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {Reaper} from "./Reaper.sol";
 import {IInitData} from "./interfaces/IInitData.sol";
 import {ReaperConsumer} from "./ReaperConsumer.sol";

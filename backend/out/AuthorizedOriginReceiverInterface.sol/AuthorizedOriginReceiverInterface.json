@@ -1,0 +1,780 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "activateAuthorizedReceiver",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "senders",
+          "type": "address[]"
+        }
+      ],
+      "name": "addAuthorizedSenders",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "authorizedReceiverActive",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deactivateAuthorizedReceiver",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAuthorizedSenders",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "isAuthorizedSender",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "senders",
+          "type": "address[]"
+        }
+      ],
+      "name": "removeAuthorizedSenders",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "activateAuthorizedReceiver()": "110254c8",
+    "addAuthorizedSenders(address[])": "4dcef404",
+    "authorizedReceiverActive()": "4b4fa0c1",
+    "deactivateAuthorizedReceiver()": "91bb64eb",
+    "getAuthorizedSenders()": "2408afaa",
+    "isAuthorizedSender(address)": "fa00763a",
+    "removeAuthorizedSenders(address[])": "03e1bf23"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"activateAuthorizedReceiver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"senders\",\"type\":\"address[]\"}],\"name\":\"addAuthorizedSenders\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"authorizedReceiverActive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deactivateAuthorizedReceiver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAuthorizedSenders\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"isAuthorizedSender\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"senders\",\"type\":\"address[]\"}],\"name\":\"removeAuthorizedSenders\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"activateAuthorizedReceiver()\":{\"details\":\"Triggers AuthorizedOriginReceiver usage to block unuthorized senders. Requirements: - The contract must not be deactive.\"},\"addAuthorizedSenders(address[])\":{\"params\":{\"senders\":\"The addresses of the wallet addresses to grant access\"}},\"authorizedReceiverActive()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"deactivateAuthorizedReceiver()\":{\"details\":\"Triggers AuthorizedOriginReceiver usage to allow all senders. Requirements: - The contract must be active.\"},\"getAuthorizedSenders()\":{\"returns\":{\"_0\":\"array of addresses\"}},\"isAuthorizedSender(address)\":{\"params\":{\"sender\":\"The address of the Chainlink node\"},\"returns\":{\"_0\":\"The authorization status of the node\"}},\"removeAuthorizedSenders(address[])\":{\"params\":{\"senders\":\"The addresses of the wallet addresses to revoke access\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addAuthorizedSenders(address[])\":{\"notice\":\"Sets the permission to request for the given wallet(s).\"},\"getAuthorizedSenders()\":{\"notice\":\"Retrieve a list of authorized senders\"},\"isAuthorizedSender(address)\":{\"notice\":\"Use this to check if a node is authorized for fulfilling requests\"},\"removeAuthorizedSenders(address[])\":{\"notice\":\"Remove the permission to request for the given wallet(s).\"}},\"notice\":\"Modified AuthorizedReciever abstract for use on the Functions Oracle contract to limit usageUses tx.origin instead of msg.sender because the client contract sends messages to the Oracle contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/chainlink/dev/interfaces/AuthorizedOriginReceiverInterface.sol\":\"AuthorizedOriginReceiverInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink/=node_modules/@chainlink/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@gnosis.pm/=node_modules/@gnosis.pm/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"contracts/chainlink/dev/interfaces/AuthorizedOriginReceiverInterface.sol\":{\"keccak256\":\"0x6654439b910fea3af9ca8292f7b25f498a2be2964f101660765049964f1ac74b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8bd4b4a16327d3f6e0ca389745e96deda025963e421565a65eb3b5ab8c15ffb1\",\"dweb:/ipfs/QmZ2XVHXg9BmJu7yjrwe5SJuQXwYhhL7So1DJDTTR6czRr\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "activateAuthorizedReceiver"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "senders",
+              "type": "address[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addAuthorizedSenders"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "authorizedReceiverActive",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deactivateAuthorizedReceiver"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAuthorizedSenders",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isAuthorizedSender",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "senders",
+              "type": "address[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeAuthorizedSenders"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "activateAuthorizedReceiver()": {
+            "details": "Triggers AuthorizedOriginReceiver usage to block unuthorized senders. Requirements: - The contract must not be deactive."
+          },
+          "addAuthorizedSenders(address[])": {
+            "params": {
+              "senders": "The addresses of the wallet addresses to grant access"
+            }
+          },
+          "authorizedReceiverActive()": {
+            "details": "Returns true if the contract is paused, and false otherwise."
+          },
+          "deactivateAuthorizedReceiver()": {
+            "details": "Triggers AuthorizedOriginReceiver usage to allow all senders. Requirements: - The contract must be active."
+          },
+          "getAuthorizedSenders()": {
+            "returns": {
+              "_0": "array of addresses"
+            }
+          },
+          "isAuthorizedSender(address)": {
+            "params": {
+              "sender": "The address of the Chainlink node"
+            },
+            "returns": {
+              "_0": "The authorization status of the node"
+            }
+          },
+          "removeAuthorizedSenders(address[])": {
+            "params": {
+              "senders": "The addresses of the wallet addresses to revoke access"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addAuthorizedSenders(address[])": {
+            "notice": "Sets the permission to request for the given wallet(s)."
+          },
+          "getAuthorizedSenders()": {
+            "notice": "Retrieve a list of authorized senders"
+          },
+          "isAuthorizedSender(address)": {
+            "notice": "Use this to check if a node is authorized for fulfilling requests"
+          },
+          "removeAuthorizedSenders(address[])": {
+            "notice": "Remove the permission to request for the given wallet(s)."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@gnosis.pm/=node_modules/@gnosis.pm/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/chainlink/dev/interfaces/AuthorizedOriginReceiverInterface.sol": "AuthorizedOriginReceiverInterface"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/chainlink/dev/interfaces/AuthorizedOriginReceiverInterface.sol": {
+        "keccak256": "0x6654439b910fea3af9ca8292f7b25f498a2be2964f101660765049964f1ac74b",
+        "urls": [
+          "bzz-raw://8bd4b4a16327d3f6e0ca389745e96deda025963e421565a65eb3b5ab8c15ffb1",
+          "dweb:/ipfs/QmZ2XVHXg9BmJu7yjrwe5SJuQXwYhhL7So1DJDTTR6czRr"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/chainlink/dev/interfaces/AuthorizedOriginReceiverInterface.sol",
+    "id": 5550,
+    "exportedSymbols": {
+      "AuthorizedOriginReceiverInterface": [
+        5549
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1768:13",
+    "nodes": [
+      {
+        "id": 5504,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:13",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ]
+      },
+      {
+        "id": 5549,
+        "nodeType": "ContractDefinition",
+        "src": "284:1515:13",
+        "nodes": [
+          {
+            "id": 5511,
+            "nodeType": "FunctionDefinition",
+            "src": "415:65:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5506,
+              "nodeType": "StructuredDocumentation",
+              "src": "332:80:13",
+              "text": " @dev Returns true if the contract is paused, and false otherwise."
+            },
+            "functionSelector": "4b4fa0c1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authorizedReceiverActive",
+            "nameLocation": "424:24:13",
+            "parameters": {
+              "id": 5507,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "448:2:13"
+            },
+            "returnParameters": {
+              "id": 5510,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5509,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5511,
+                  "src": "474:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5508,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "474:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "473:6:13"
+            },
+            "scope": 5549,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5515,
+            "nodeType": "FunctionDefinition",
+            "src": "647:47:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5512,
+              "nodeType": "StructuredDocumentation",
+              "src": "484:160:13",
+              "text": " @dev Triggers AuthorizedOriginReceiver usage to block unuthorized senders.\n Requirements:\n - The contract must not be deactive."
+            },
+            "functionSelector": "110254c8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "activateAuthorizedReceiver",
+            "nameLocation": "656:26:13",
+            "parameters": {
+              "id": 5513,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "682:2:13"
+            },
+            "returnParameters": {
+              "id": 5514,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "693:0:13"
+            },
+            "scope": 5549,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5519,
+            "nodeType": "FunctionDefinition",
+            "src": "847:49:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5516,
+              "nodeType": "StructuredDocumentation",
+              "src": "698:146:13",
+              "text": " @dev Triggers AuthorizedOriginReceiver usage to allow all senders.\n Requirements:\n - The contract must be active."
+            },
+            "functionSelector": "91bb64eb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deactivateAuthorizedReceiver",
+            "nameLocation": "856:28:13",
+            "parameters": {
+              "id": 5517,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "884:2:13"
+            },
+            "returnParameters": {
+              "id": 5518,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "895:0:13"
+            },
+            "scope": 5549,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5526,
+            "nodeType": "FunctionDefinition",
+            "src": "1055:67:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5520,
+              "nodeType": "StructuredDocumentation",
+              "src": "900:152:13",
+              "text": " @notice Sets the permission to request for the given wallet(s).\n @param senders The addresses of the wallet addresses to grant access"
+            },
+            "functionSelector": "4dcef404",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAuthorizedSenders",
+            "nameLocation": "1064:20:13",
+            "parameters": {
+              "id": 5524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5523,
+                  "mutability": "mutable",
+                  "name": "senders",
+                  "nameLocation": "1104:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5526,
+                  "src": "1085:26:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5521,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1085:7:13",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 5522,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1085:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1084:28:13"
+            },
+            "returnParameters": {
+              "id": 5525,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1121:0:13"
+            },
+            "scope": 5549,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5533,
+            "nodeType": "FunctionDefinition",
+            "src": "1284:70:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5527,
+              "nodeType": "StructuredDocumentation",
+              "src": "1126:155:13",
+              "text": " @notice Remove the permission to request for the given wallet(s).\n @param senders The addresses of the wallet addresses to revoke access"
+            },
+            "functionSelector": "03e1bf23",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAuthorizedSenders",
+            "nameLocation": "1293:23:13",
+            "parameters": {
+              "id": 5531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5530,
+                  "mutability": "mutable",
+                  "name": "senders",
+                  "nameLocation": "1336:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5533,
+                  "src": "1317:26:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5528,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1317:7:13",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 5529,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1317:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1316:28:13"
+            },
+            "returnParameters": {
+              "id": 5532,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1353:0:13"
+            },
+            "scope": 5549,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5540,
+            "nodeType": "FunctionDefinition",
+            "src": "1453:73:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5534,
+              "nodeType": "StructuredDocumentation",
+              "src": "1358:92:13",
+              "text": " @notice Retrieve a list of authorized senders\n @return array of addresses"
+            },
+            "functionSelector": "2408afaa",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuthorizedSenders",
+            "nameLocation": "1462:20:13",
+            "parameters": {
+              "id": 5535,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1482:2:13"
+            },
+            "returnParameters": {
+              "id": 5539,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5538,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5540,
+                  "src": "1508:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5536,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1508:7:13",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 5537,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1508:9:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1507:18:13"
+            },
+            "scope": 5549,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5548,
+            "nodeType": "FunctionDefinition",
+            "src": "1724:73:13",
+            "nodes": [],
+            "documentation": {
+              "id": 5541,
+              "nodeType": "StructuredDocumentation",
+              "src": "1530:191:13",
+              "text": " @notice Use this to check if a node is authorized for fulfilling requests\n @param sender The address of the Chainlink node\n @return The authorization status of the node"
+            },
+            "functionSelector": "fa00763a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAuthorizedSender",
+            "nameLocation": "1733:18:13",
+            "parameters": {
+              "id": 5544,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5543,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1760:6:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5548,
+                  "src": "1752:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5542,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1752:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1751:16:13"
+            },
+            "returnParameters": {
+              "id": 5547,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5546,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5548,
+                  "src": "1791:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5545,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1791:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1790:6:13"
+            },
+            "scope": 5549,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AuthorizedOriginReceiverInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 5505,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:225:13",
+          "text": " @notice Modified AuthorizedReciever abstract for use on the Functions Oracle contract to limit usage\n @notice Uses tx.origin instead of msg.sender because the client contract sends messages to the Oracle contract"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          5549
+        ],
+        "name": "AuthorizedOriginReceiverInterface",
+        "nameLocation": "294:33:13",
+        "scope": 5550,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 13
+}

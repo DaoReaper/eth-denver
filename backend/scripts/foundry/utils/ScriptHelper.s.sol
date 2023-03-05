@@ -47,17 +47,15 @@ contract ScriptHelper is Script, IInitData {
 
     // configure initialization data
     function configureInitData(
-        address dao,
-        address asset,
-        address target,
-        uint256 interval,
-        uint256 threshold
+        address _dao,
+        address _target,
+        uint256 _interval,
+        uint256 _threshold
     ) public {
-        initData.baalDao = dao;
-        initData.liquidationAsset = asset;
-        initData.liquidationTarget = target;
-        initData.interval = interval;
-        initData.threshold = threshold;
+        initData.baalDao = _dao;
+        initData.liquidationTarget = _target;
+        initData.interval = _interval;
+        initData.threshold = _threshold;
     }
 
     function fundSafe() public {

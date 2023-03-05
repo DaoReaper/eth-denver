@@ -18,7 +18,6 @@ contract ReaperInitiationScript is ScriptHelper {
 
         configureInitData(
             address(baal),
-            address(testLiquidationAsset),
             testLiquidationTarget,
             testInterval,
             threshold
