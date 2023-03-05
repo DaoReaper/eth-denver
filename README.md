@@ -42,8 +42,8 @@ Future Scope
 Sources
 
 
-
 Overview
+
 
 The DAO Reaper is an open-source public goods-oriented DAO tooling designed to provide engagement incentives, provide simple on-chain DAO reputation scoring, disincentivize purposeless treasury hoarding and act as an indicator for certain malicious behaviors aimed at treasury capture. Malicious behaviors include the multisig signers shutting down the engagement by declining all the proposals to make it easier for them to reach the quorum, which then allows them to run away with the treasury. After being implemented by the DAO, the Reaper checks if it is active and reputable and based on the outcome of the check, the Reaper lets the DAO be or it “reaps”, which means it overtakes the DAO and transfers the entirety of the DAO’s treasury to a public goods funds.
 
@@ -54,7 +54,6 @@ Ultimately, the concept comes down to a regenerative approach to “Use it or Lo
 About the team
 
 Rowdy – 10+ years in software development, Ethereum Foundation grantee, ETH Denver 2021 virtual top 3, DAOHaus contributor, Raidguild member, ex-Deloitte
-
 
 Tconomist – advanced degree in economics and finance, game theory and tokenomics scholar, published a research paper on DeFi and financial inclusion,  Community and Partnerships @XYZ.ai
 
