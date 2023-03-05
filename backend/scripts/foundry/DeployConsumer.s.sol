@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "../../lib/forge-std/src/Script.sol";
-import {ReaperConsumer} from "../../contracts/ReaperConsumer.sol";
+import {ReaperConsumer} from "../../contracts/chainlink/ReaperConsumer.sol";
 
 // BROADCAST
 // forge script scripts/foundry/DeployConsumer.s.sol:DeployConsumerScript --rpc-url $RU --private-key $PK --broadcast --verify --etherscan-api-key $EK -vvvv

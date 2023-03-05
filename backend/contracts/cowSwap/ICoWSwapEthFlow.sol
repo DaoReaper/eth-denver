@@ -4,6 +4,9 @@ pragma solidity ^0.8.7;
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 library EthFlowOrder {
+    /**
+     * Pull Request approved on EthFlowOrder by CoW Protocol made by hking2
+     */
     struct Data {
         /// @dev The address of the token that should be bought for ETH. It follows the same format as in the CoW Swap
         /// contracts, meaning that the token GPv2Transfer.BUY_ETH_ADDRESS (0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)
@@ -39,8 +42,3 @@ interface ICoWSwapEthFlow {
         payable
         returns (bytes32 orderHash);
 }
-
-// 0x37c5b029f9c3691b3d47cb024f84e5e257aeb0bb.createOrder
-// (order = {"buyToken":"0x91056d4a53e1faa1a84306d4deaec71085394bc8","receiver":"0x37c5b029f9c3691b3d47cb024f84e5e257aeb0bb","sellAmount":"999999133013329213","buyAmount":"4694053363558763553812","appData":"0x3f1aabaf92e2f1cdd097c8712ef50a412c7e37e28ac7d08c63b9eba3d64f2b8d","feeAmount":"866986670787","validTo":1677806927,"partiallyFillable":false,"quoteId":198144})
-// =>
-// (0x3f0b7903630adca249699fcf03f486e119ea1ae2b6dd10c32f3f644d62664036)
