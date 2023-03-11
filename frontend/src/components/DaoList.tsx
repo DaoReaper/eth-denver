@@ -13,7 +13,6 @@ import { useDaosByUser } from "@daohaus/moloch-v3-hooks";
 import { Dao_Filter } from "@daohaus/moloch-v3-data";
 import { JSONDisplay } from "./JSONDisplay";
 import styled from "styled-components";
-import { DaoOverview } from "@daohaus/moloch-v3-macro-ui";
 
 const CenterLayout = styled("div")`
   display: flex;
@@ -21,6 +20,11 @@ const CenterLayout = styled("div")`
   padding-top: 4rem;
   margin: auto;
   /* align-items: center; */
+`;
+
+const StyledCard = styled(Card)`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const DaoList = () => {
@@ -50,7 +54,7 @@ export const DaoList = () => {
         <div className="">
           <Input id="test" onChange={handleSearch} placeholder="dummy-search" />
           {daos?.length ? (
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <StyledCard>
               {daos.map((dao) => (
                 <Link
                   key={dao.dao}
@@ -59,7 +63,7 @@ export const DaoList = () => {
                   <ParSm>{dao.name}</ParSm>
                 </Link>
               ))}
-            </div>
+            </StyledCard>
           ) : (
             <div>No daos</div>
           )}
