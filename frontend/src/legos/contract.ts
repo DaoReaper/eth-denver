@@ -60,7 +60,7 @@ export const APP_CONTRACT: Record<string, ContractLego> = {
   REAPER_FACTORY: {
     type: "static",
     contractName: "REAPER_FACTORY",
-    abi: ReaperFactory,
+    abi: ReaperFactory.abi,
     targetAddress: {
       "0x1": "0xcC0FB6A00F2b29dA23069bf3Cc48B6F50EFF6191",
       "0x5": "0xcC0FB6A00F2b29dA23069bf3Cc48B6F50EFF6191",
