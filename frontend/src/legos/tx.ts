@@ -16,35 +16,52 @@ export enum ProposalTypeIds {
 }
 
 export const REAPER_TX: Record<string, TXLego> = {
-  POST_SIGNAL: buildMultiCallTX({
+  CREATE_REAPER: {
     id: "CREATE_REAPER",
-    JSONDetails: {
-      type: "JSONDetails",
-      jsonSchema: {
-        baalDao: `.formValues.baalDao`,
-        liquidationTarget: `.formValues.liquidationTarget`,
-        interval: `.formValues.interval`,
-        threshold: `.formValues.threshold`,
-      },
-    },
-    actions: [
+    contract: APP_CONTRACT.REAPER_TX,
+    method: "deployReaper",
+    args: [
       {
-        contract: APP_CONTRACT.POSTER,
-        method: "post",
-        args: [
-          {
-            type: "JSONDetails",
-            jsonSchema: {
-              baalDao: `.formValues.baalDao`,
-              liquidationTarget: `.formValues.liquidationTarget`,
-              interval: `.formValues.interval`,
-              threshold: `.formValues.threshold`,
-            },
-          },
-        ],
+        type: "JSONDetails",
+        jsonSchema: {
+          baalDao: `.formValues.baalDao`,
+          liquidationTarget: `.formValues.liquidationTarget`,
+          interval: `.formValues.interval`,
+          threshold: `.formValues.threshold`,
+        },
       },
     ],
-  }),
+  },
+
+  // CREATE_REAPER: buildMultiCallTX({
+  //   id: "CREATE_REAPER",
+  //   JSONDetails: {
+  //     type: "JSONDetails",
+  //     jsonSchema: {
+  //       baalDao: `.formValues.baalDao`,
+  //       liquidationTarget: `.formValues.liquidationTarget`,
+  //       interval: `.formValues.interval`,
+  //       threshold: `.formValues.threshold`,
+  //     },
+  //   },
+  //   actions: [
+  //     {
+  //       contract: APP_CONTRACT.REAPER_TX,
+  //       method: "deployReaper",
+  //       args: [
+  //         {
+  //           type: "JSONDetails",
+  //           jsonSchema: {
+  //             baalDao: `.formValues.baalDao`,
+  //             liquidationTarget: `.formValues.liquidationTarget`,
+  //             interval: `.formValues.interval`,
+  //             threshold: `.formValues.threshold`,
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // }),
 };
 
 export const APP_TX = {

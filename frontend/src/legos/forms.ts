@@ -27,6 +27,7 @@ export const APP_FORM: Record<string, CustomFormLego> = {
     id: "REAPER",
     title: "Summon a Reaper to your DAO",
     subtitle: "Proposal to Reap",
+    description: "Claim DAO tokens for work completed",
     requiredFields: {
       interval: true,
       threshold: true,
