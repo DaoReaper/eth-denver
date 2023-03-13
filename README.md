@@ -68,7 +68,7 @@ Tconomist has an advanced degree in economics and finance, game theory and token
 
 2 times ETH Global hackathon winner, taught Solidity smart contracts security courses, freelance DAO software developer, active RaidGuild contributor, Hats protocol contributor
 
-#### Special shout out to those that gave us APIs access along with our Sources:
+## Thank you to those that gave APIs access along with our Sources:
 
 Social organization dynamics:
 https://community.khoros.com/t5/Khoros-Communities-Blog/The-90-9-1-Rule-in-Reality/ba-p/5463
